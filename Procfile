@@ -1,1 +1,1 @@
-web: gunicorn better-health-care.wsgi
+web: gunicorn better_healthcare.wsgi
