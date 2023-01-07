@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import Appointment
 
-# Create your views here.
+
+class AppointmentList(generic.ListView):
+    model = Appointment
+    queryset = Appointment.objects.filter(status=1).order_by("-created_on")
+    template_name = "index.html"
+    paginate_by = 6

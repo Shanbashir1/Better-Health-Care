@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="container">
+
+    <!-- clinic welcome section -->
+        <div class="image-fluid"">
+            <img src="{% static 'image/doctor.jpg' %}" height="100%", width="100%" class="background-image"
+                role="button">
+        </div>
+    </div>
+
+    <!-- why choose the clinic -->
+    <div class="row mt-5 my-3 pl-5 px-5">
+        <div class="col-12">
+            <h2 style="font-family: 'Roboto', sans-serif;">Why Choose Us?</h2>
+        </div>
+        <div class="col-12">
+            <p class="lead">Why choose us?
+                Clean, purpose-built GP surgery over 2 floors, in a central Watford location
+                95% patients felt their needs were met during their last general practice appointment (higher than national average)- 2020 National GP survey
+                Friendly and experienced Patient Advisors
+                Up-to-date technology including video call and text messaging
+                Multi-skilled clinical team including GPs, Pharmacists, Nurse Practitioners, Physiotherapist, Nurse and Health Care Assistants
+                High quality care focussed on the needs of our patients
+                Member of Primary Care Network offering evening and weekend appointments</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
