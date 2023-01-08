@@ -3,6 +3,7 @@ from .models import Appointment
 from django_summernote.admin import SummernoteModelAdmin
 
 
+
 @admin.register(Appointment)
 class AppointmentAdmin(SummernoteModelAdmin):
 
@@ -10,4 +11,6 @@ class AppointmentAdmin(SummernoteModelAdmin):
     summernote_fields = ('content')
     search_fields = ('first_name', 'surname')
     actions = ('status')
+
+
 
