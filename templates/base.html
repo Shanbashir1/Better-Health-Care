@@ -30,7 +30,8 @@
 <body class="d-flex flex-column min-vh-100 gy-0">
 
     <header>
-        <!-- site navbar -->
+        
+<!--Logo, Header and site navbar with sign in options  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid" style="background-color: #150f0116;">
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -39,7 +40,6 @@
                         class="thin"><i class="fa-solid fa-kit-medical"></i> | Care</span></span></span></a>
                 </a>
                 
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,12 +72,21 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
+                <span class=" font-italic navbar-text text-danger font-italic">
                     "Providing Quality Care For The Most Needed"
                 </span>
             </div>
         </div>
     </nav>
+
+<!-- Message for users when signing in or any communication with the site -->
+    {% if messages %}
+    <div class="alert alert-success mb-2 create_message" role="alert">
+      {% for message in messages %}
+        <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
 
 
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -89,7 +98,7 @@
                 <a class="nav-link" href="{% url 'about' %}">About Us</a>
             </li>
             <li class="nav-item nav-bg-design">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
             </li>
             <li class="nav-item nav-bg-design">
                 <a class="nav-link" href="#">Book Appointment</a>
@@ -133,10 +142,10 @@
             <h5 class="mb-3 text-dark">Links</h5>
             <ul class="list-unstyled mb-0">
               <li class="mb-1">
-                <a href="#!" style="color: #4f4f4f;">About Us</a>
+                <a href="{% url 'about' %}" style="color: #4f4f4f;">About Us</a>
               </li>
               <li class="mb-1">
-                <a href="#!" style="color: #4f4f4f;">Login</a>
+                <a href="{% url 'account_login' %}" style="color: #4f4f4f;">Login</a>
               </li>
               <li class="mb-1">
                 <a href="#!" style="color: #4f4f4f;">Book Appointment</a>
@@ -204,6 +213,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+            <!-- javascript file -->
+    <script>
+
+        $(document).ready(() => {
+            const date = new Date()
+            const currentYear = date.getFullYear()
+            $('.current-year').html(currentYear)
+
+            $('.navbar-toggler').click(() => {
+                $('.toggle-login').toggle('slow')
+            })
+
+            // delays the message and then hide
+            setTimeout(() => {
+                $('.create_message').hide()
+            }, 3000);
+        })
+    </script>
 </body>
 
 </html>

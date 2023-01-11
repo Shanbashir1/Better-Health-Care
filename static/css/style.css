@@ -22,3 +22,8 @@ header.about_page {
     background-color: #212529;
     margin-top: 0;
   }
+
+  .btn-signup {
+    background-color: #23BBBB;
+    color: #fff;
+}
