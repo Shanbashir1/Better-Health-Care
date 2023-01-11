@@ -8,6 +8,7 @@ django-allauth==0.52.0
 django-crispy-forms==1.14.0
 django-phone-field==1.8.1
 django-summernote==0.8.20.0
+django-widget-tweaks==1.4.12
 Flask==2.2.2
 gunicorn==20.1.0
 itsdangerous==2.1.2

@@ -19,6 +19,9 @@ class ContactUs(CreateView):
     fields = '__all__'
     success_url = reverse_lazy('contact')
 
+    '''
+    Sends the data back to the admin page 
+    '''
     def form_valid(self, form):
         messages.success(
         self.request,
@@ -27,6 +30,7 @@ class ContactUs(CreateView):
         will be contacting you shortly.")
         form.save()
         return super().form_valid(form)
+
 
 class About(View):
     """
