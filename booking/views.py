@@ -42,18 +42,46 @@ class BookAppointment(CreateView):
             if your appointment has been approved, you will be \
                 notified via our manage booking page.")
         form.save()
-        return super().form_valid(form)
+        return HttpResponseRedirect('/manage-appointments/')
 
+class ManageAppointment(generic.ListView):
 
+    model = BookAppointmentModel
+    template_name = 'manage-appointments.html'
+    paginate_by = 3
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['appointments'] = context['object_list']
+        return context
 
-    # template_name = 'book_appointment.html'
-    # form_class = BookAppointmentForm
+    def get_queryset(self):
+        return BookAppointmentModel.objects.filter(
+            patient=self.request.user).order_by("created_date")
 
-    # def form_valid(self, form):
-    #     form.instance.patient = self.request.user
-    #     form.save()
-    #     messages.success(
-    #         self.request,
-    #         'Your request has been submitted and is awaiting for approval')
-    #     return HttpResponseRedirect('index')
+class DeleteAppointment(DeleteView):
+    '''
+    Handles the delete option for users, letting them
+    cancel their appointment if they wish.
+    '''
+    model = BookAppointmentModel
+    success_url = '/manage-appointments/'
+    template_name = "delete-appointments.html"
+
+    def deleted_appointment(self, request, pk, *args, **kwargs):
+        '''
+        methods handels delete
+        '''
+        appointments = BookAppointmentModel.objects.get(
+            pk=self.request.pk)
+        appointments.delete()
+
+class UpdateAppointment(UpdateView):
+    '''
+    Handels update, if user wants to make any changes in already
+    created appointment
+    '''
+    model = BookAppointmentModel
+    template_name = 'update-appointments.html'
+    form_class = BookAppointmentForm
+    success_url = '/manage-appointments/'

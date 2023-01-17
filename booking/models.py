@@ -18,12 +18,11 @@ class BookAppointmentModel(models.Model):
     last_name = models.CharField(max_length=30)
     patient = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='user_booking', null=True)
-    nhs_number = models.CharField(max_length=2000 , null=True)
+    nhs_number = models.CharField(max_length=10 , null=True)
     email = models.EmailField(max_length=40)
     created_date = models.DateField(null=True)
     created_on = models.DateTimeField(auto_now=True)
     updated_on = models.DateTimeField(auto_now=True)
-    featured_image = CloudinaryField('image', default='placeholder')
     message = models.TextField(null=True)
     urgent = models.CharField(max_length=10, choices=URGENCY, null=True)
     status = models.IntegerField(choices=STATUS, default=0)

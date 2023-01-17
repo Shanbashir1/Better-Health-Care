@@ -1,5 +1,79 @@
 {% extends 'base.html' %}
-
 {% block content %}
-{% load static %}
 
+  <!-- Manage bookings page -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 class="your-appointments-header-text class text-success">Your Appointments</h2>
+    </div>
+  </div>
+  <!-- if user dosnt have any appointments booked yet --> 
+  {% if not appointments %} 
+  <div class="row col-12 text-center mt-4">
+    <div class="col-12 col-md-8 offset-md-2">
+      <p class="text-secondary">No scheduled appointments</p>
+      <a href="{% url 'book_appointment' %}" role="button">
+        <button class="btn btn-success my-4 mt-4 text-center">Book Appointment </button>
+      </a>
+    </div>
+  </div>
+  <!-- display users appointments --> 
+  {% else %} 
+  <div class="row text-center gx-0"> 
+    {% for appointment in appointments %} 
+    <div class="card text-center">
+      <div class="row">
+        <div class="text-center mb-5 mt-3">
+          <!-- if admin approves the appointment --> 
+          {% if appointment.status == 1 %} 
+          <h3 class="card-title">
+            <i class="fa-solid fa-thumbs-up"></i> Approved
+          </h3> 
+          {% else %}
+          <!-- otherwise user's will be seeing this message -->
+          <h3 class="card-title">
+            <i class="fa-solid fa-clock"></i> Awaiting Approval
+          </h3> 
+          {% endif %}
+          <hr>
+          <p>First Name: <strong class="text-danger">{{ appointment.first_name }}</strong>
+          </p>
+          <p>Last Name: <strong class="text-danger">{{ appointment.last_name }}</strong>
+          </p>
+          <p>Requested Date: <strong class="text-danger">{{ appointment.created_date }}</strong>
+          </p>
+          <p>Doctor: <strong class="text-danger">{{ appointment.doctor}}</strong>
+          </p>
+          <p>Urgent: <strong class="text-danger">{{ appointment.urgent}}</strong>
+          </p>
+          <!-- if appointments not approved user can update or delete their appointment aswell --> 
+          {% if appointment.status == 0 %} <a href="{% url 'update-appointments' pk=appointment.id %}" class="btn btn-primary">Update</a>
+          <a href="{% url 'delete-appointments' pk=appointment.id %}" class="btn btn-danger">Cancel</a> {% endif %}
+        </div>
+      </div>
+    </div> 
+    {% endfor %} 
+</div>
+  <!-- if appointments are more than 3 --> 
+  {% if is_paginated %} 
+  <div class="row mt-3 my-3">
+    <div class="col">
+      <ul class="pagination justify-content-center"> 
+        {% if page_obj.has_previous %} 
+        <li>
+          <a href="?page={{ page_obj.previous_page_number }}" class="page-link next-paginated-btn">&laquo; PREV </a>
+        </li> 
+        {% endif %} 
+        {% if page_obj.has_next %} 
+        <li>
+          <a href="?page={{ page_obj.next_page_number }}" class="page-link previous-paginated-btn"> NEXT &raquo;</a>
+        </li> 
+        {% endif %} 
+    </ul>
+    </div>
+  </div> 
+  {% endif %} 
+  {% endif %}
+</div> 
+{% endblock %}

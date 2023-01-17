@@ -1,33 +1,20 @@
-{% extends "base.html" %}
-{% load crispy_forms_tags %}
-
-{% block content %}
+{% extends "base.html" %} 
+{% load crispy_forms_tags %} 
+{% block content %} 
 <div class="container">
-    <div class="row mt-3">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h1 class="mb-4">Contact Us</h1>
-            <h5>This form is for feedback and complaints  to the practice only and is not meant for clinical or urgent enquiries.
-                We monitor responses daily.</h5>
-                {% if messages %}
-                <div class="alert alert-success" role="alert">
-                  {% for message in messages %}
-                    <p>{{ message }}</p>
-                  {% endfor %}
-                </div>
-              {% endif %}
-       
+  <div class="row mt-3">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1 class="mb-4">Contact Us</h1>
+      <h5>This form is for feedback and complaints to the practice only and is not meant for clinical or urgent enquiries. We monitor responses daily.</h5> 
     </div>
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-
-              <button type="submit" class="btn btn-secondary btn-card btn-lg my-4">Send</button>
-            </div>
-                </div>
-            </form>
-        </div>
+      <div class="col-md-8 mt-3 offset-md-2">
+        <form method="post"> 
+          {% csrf_token %} 
+          {{ form|crispy }}
+          <button type="submit" class="btn btn-success btn-card btn-lg my-4">Send</button>
+      </div>
     </div>
-</div>
+    </form>
+  </div>
 {% endblock %}

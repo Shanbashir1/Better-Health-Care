@@ -22,13 +22,13 @@ class BookAppointmentAdmin(admin.ModelAdmin):
                       'status')
     list_filter = ('admin_decision', 'created_on')
     search_fields = ['name']
-    actions = ['approve_request']
+    actions = ['approve_request', 'not_approved']
 
     def approve_request(self, request, queryset):
         '''
         Handels status choices
         '''
-        queryset.update(status=1)
+        queryset.update(status=0)
 
 
 

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% load crispy_forms_tags %} 
+{% block content %}
+
+
+<div class="container">
+
+    <div class="row my-3">
+        <div class="col-12">
+            <h2 class="text-center update-appointments-page-header-text"><i
+                    class="fa-regular fa-calendar-check"></i> Update Booking Details
+            </h2>
+        </div>
+    </div>
+
+    <!-- update appointment form -->
+    <div class="row mt-3">
+        <div class="col-10 offset-1 col-md-8 offset-md-2 mt-2 mt-sm-2 mt-md-0 p-4 p-sm-5 update-booking-form-bg">
+
+            <form method="POST" class="text-center">
+                {% csrf_token %} 
+                {{ form | crispy }}
+                <div class="my-4">
+                <button type="submit" class="btn btn-success btn-card btn-lg">Save</button>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.datetimepicker.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="{% static 'js/libraries/jquery.datetimepicker.full.min.js' %}"></script>
+<script src="{% static 'js/datepicker.js' %}"></script>
+      {{ form.media }}
+
+{% endblock %}

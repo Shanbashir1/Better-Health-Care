@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<form method="post" action=""> 
+{% csrf_token %} 
+
+<p>Please confirm cancellation of the appointment <strong class="fst-italic">{{ first_name }}</strong>? </p>
+  <button type="submit" class="btn btn-danger">Confirm</button>
+  <a href="{% url 'manage-appointments' %}">
+    <button type="button" class="btn btn-success">Cancel</button>
+  </a>
+
+</form> 
+
+{% endblock %}

@@ -3,40 +3,37 @@
 {% load crispy_forms_tags %} 
 {% block content %} 
 <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-8 mt-3 offset-md-2">
-        <h1 class="mb-4">Book an appointment</h1>
-        <h6>To book your appointment, you must complete the form and select a date which is preffered, our team will then manage your booking, and approve or decline your request. However please note urgent appointments can not be booked online.</h6>
-        <!-- to book an appointment user's needs to log in --> 
-        {% if user.is_authenticated %} 
-        <div class="row">
-          <div class="col-md-8 mt-3 offset-md-2">
-            <form method="post"> 
-                {% csrf_token %} 
-                {{ form | crispy }}
-              <div class="my-4">
-                <button type="submit" class="btn btn-secondary btn-card btn-lg">Book</button>
-              </div>
-            </form>
-          </div>
+  <div class="row mt-3">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h1 class="mb-4 mt-4 text-center">Book an appointment</h1>
+      <h6 class="mt-4 text-center">To book your appointment, you must complete the form and select a date which is preffered, our team will then manage your booking, and approve or decline your request.</h6>
+      <!-- To book an appointment user's will needs to log in --> 
+      {% if user.is_authenticated %} 
+      <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+          <form method="post"> 
+            {% csrf_token %} 
+            {{ form | crispy }}
+            <div class="my-4">
+              <button type="submit" class="btn btn-secondary btn-card btn-lg">Book</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-        {% else %}
-        <div class="row mt-3">
-         <div class="col-10 offset-1 col-md-8 offset-md-2 mt-2 mt-sm-2 mt-md-0 p-4 p-sm-5 register-to-book-an-appointment">
-          <div class="alert" role="alert">
-              <h4 class="text-center"><a href="{% url 'account_login' %}">Log In</a>/<a href="{% url 'account_signup' %}">Register</a> to book an appointment</h4>
-          </div>
-      </div>
+</div> {% else %} <div class="row mt-3">
+  <div class="col-10 offset-1 col-md-8 offset-md-2 mt-2 mt-sm-2 mt-md-0 p-4 p-sm-5 register-to-book-an-appointment">
+    <div class="alert" role="alert">
+      <h4 class="text-center">
+        <a href="{% url 'account_login' %}">Log In</a>/ <a href="{% url 'account_signup' %}">Register</a> to book an appointment
+      </h4>
+    </div>
   </div>
-        {% endif %}
-</div>
-
-  <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.datetimepicker.css' %}">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="{% static 'js/libraries/jquery.datetimepicker.full.min.js' %}"></script>
-  <script src="{% static 'js/datepicker.js' %}"></script>
-        {{ form.media }} 
-        {%endblock%}
+{% endif %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.datetimepicker.css' %}">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="{% static 'js/libraries/jquery.datetimepicker.full.min.js' %}"></script>
+<script src="{% static 'js/datepicker.js' %}"></script>
+{{ form.media }} 
+{%endblock%}
