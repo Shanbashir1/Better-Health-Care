@@ -7,7 +7,9 @@
     <div class="col-md-8 mt-3 offset-md-2">
       <h1 class="mb-4 mt-4 text-center">Book an appointment</h1>
       <h6 class="mt-4 text-center">To book your appointment, you must complete the form and select a date which is preffered, our team will then manage your booking, and approve or decline your request.</h6>
+      
       <!-- To book an appointment user's will needs to log in --> 
+      
       {% if user.is_authenticated %} 
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
@@ -15,7 +17,7 @@
             {% csrf_token %} 
             {{ form | crispy }}
             <div class="my-4">
-              <button type="submit" class="btn btn-secondary btn-card btn-lg">Book</button>
+              <button type="submit" class="btn btn-success btn-card btn-lg">Book</button>
             </div>
           </form>
         </div>

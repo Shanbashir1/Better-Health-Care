@@ -13,21 +13,26 @@ from django_summernote.admin import SummernoteModelAdmin
 #     actions = ('status')
 
 @admin.register(BookAppointmentModel)
+
+
+
 class BookAppointmentAdmin(admin.ModelAdmin):
     '''
-    Created a custom admin page to simplify admin tasks
-    and give admins more control over the users.
+    The admin page, will display benefit search and actions filters for the site admin.
     '''
+
     list_display = ('title', 'first_name', 'last_name', 'email', 'created_on',
                       'status')
     list_filter = ('admin_decision', 'created_on')
-    search_fields = ['name']
-    actions = ['approve_request', 'not_approved']
+    search_fields = ('first_name', 'surname')
+    actions = ('approve_request', 'decline')
 
     def approve_request(self, request, queryset):
-        '''
-        Handels status choices
-        '''
+
+        queryset.update(status=0)
+
+    def decline(self, request, queryset):
+
         queryset.update(status=0)
 
 

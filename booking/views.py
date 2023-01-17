@@ -1,6 +1,3 @@
-'''
-Booking_app Views
-'''
 import datetime
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -14,18 +11,17 @@ from .models import BookAppointmentModel
 
 
 class Index(generic.TemplateView):
-    '''
-    Hisplay home view for the site
-    '''
+
     template_name = 'index.html'
 
 
 
+'''
+Once the booking has been created, the user will be directed to the manage booking page. 
+The data recorded from the form will be displayed on the admin page.
+'''
 class BookAppointment(CreateView):
-    '''
-    After submitting the form user details will be saved in the database
-    and users will be redirected to the manage booking page.
-    '''
+
     form_class = BookAppointmentForm
     template_name = 'book_appointment.html'
     success_url = reverse_lazy('book_appointment')
@@ -44,6 +40,9 @@ class BookAppointment(CreateView):
         form.save()
         return HttpResponseRedirect('/manage-appointments/')
 
+'''
+The Manage page will allow the user to view the booking, if the user is logged in. .
+'''
 class ManageAppointment(generic.ListView):
 
     model = BookAppointmentModel
@@ -59,11 +58,12 @@ class ManageAppointment(generic.ListView):
         return BookAppointmentModel.objects.filter(
             patient=self.request.user).order_by("created_date")
 
+
+'''
+The delete page will allow the user to delete the booking, if they no longer require the appointment.
+'''
 class DeleteAppointment(DeleteView):
-    '''
-    Handles the delete option for users, letting them
-    cancel their appointment if they wish.
-    '''
+
     model = BookAppointmentModel
     success_url = '/manage-appointments/'
     template_name = "delete-appointments.html"
@@ -76,6 +76,10 @@ class DeleteAppointment(DeleteView):
             pk=self.request.pk)
         appointments.delete()
 
+
+'''
+The user will have a option to update the booking and view the updated changes. 
+'''
 class UpdateAppointment(UpdateView):
     '''
     Handels update, if user wants to make any changes in already

@@ -3,8 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
+# Users to select choices and options when booking appointment.
 
-STATUS = ((0, 'Waiting_Approval'), (1, 'Approved'))
+STATUS = ((0, 'Waiting_Approval'), (1, 'Approved'), (2, 'Decline'))
 TITLE_STATUS = (('MR', 'Mr'),('MRS', 'Mrs'),('MS', 'Ms'),('MISS', 'Miss'))
 DR_NAME = (('DR KEEN', 'Dr Keen'),('DR PATEL', 'Dr Patel'),('DR REUBIN', 'Dr Reubin'),('DR WATSON', 'Dr Watson'))
 URGENCY = (('NOT URGENT', 'Not Urgent'), ('URGENT', 'Urgent'))
@@ -18,7 +19,7 @@ class BookAppointmentModel(models.Model):
     last_name = models.CharField(max_length=30)
     patient = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='user_booking', null=True)
-    nhs_number = models.CharField(max_length=10 , null=True)
+    nhs_number = models.CharField(max_length=10, null=True)
     email = models.EmailField(max_length=40)
     created_date = models.DateField(null=True)
     created_on = models.DateTimeField(auto_now=True)

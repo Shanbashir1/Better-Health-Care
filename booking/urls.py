@@ -1,6 +1,9 @@
 from django.urls import path
 from .views import Index, BookAppointment, ManageAppointment, DeleteAppointment,  UpdateAppointment
 
+"""
+Url path for booking app
+"""
 urlpatterns = [
     path('', Index.as_view(), name='home'),
     path('book_appointment/', BookAppointment.as_view(),
