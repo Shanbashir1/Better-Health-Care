@@ -30,12 +30,12 @@
           <h3 class="card-title">
             <i class="fa-solid fa-thumbs-up"></i> Approved
           </h3>
-          <p>Your appointment is now confirmed</p>
+          <p>Your appointment is now confirmed. Please ensure you attend the appointment.</p>
           {% elif appointment.status == 2 %} 
           <h3 class="card-title">
             <i class="fa-solid fa-thumbs-down text-danger"></i> Decline
           </h3> 
-          <p class="text-danger">We apologies but your appointment has been declined, you may rebook or cancel your appointment</p>
+          <p>Your appointment has been declined, Please rebook to make a new booking.</p>
         {% else %}
         <!-- otherwise user's will be seeing this message -->
           <h3 class="card-title">
@@ -55,13 +55,11 @@
           </p>
           <!-- if appointments not approved user can update or delete their appointment aswell --> 
           {% if appointment.status == 0 %} <a href="{% url 'update-appointments' pk=appointment.id %}" class="btn btn-primary">Update</a>
-          {% endif %}
-          {% if appointment.status == 2 %} <a href="{% url 'update-appointments' pk=appointment.id %}" class="btn btn-primary">Update</a>
-
           <a href="{% url 'delete-appointments' pk=appointment.id %}" class="btn btn-danger">Cancel</a> {% endif %}
         </div>
       </div>
     </div> 
+
     {% endfor %} 
 </div>
   <!-- if appointments are more than 3 --> 

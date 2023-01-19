@@ -1,8 +1,8 @@
 # Project 4 - Better | Health | Care - A Online Booking System for Patients.
 
 ## Introduction
-```diff
--Better | Health | Care 
+```diff 
+Better | Health | Care 
 ```
 
 This project is a Full Stack website built using the Django framework. Better Health Care is a healthcare provision to provide patients the ability to book appointments with doctors. The users once registered can book, view and manage their appointments. If the admin declines the booking then users have the ability to rebook on another date.
@@ -17,7 +17,7 @@ Some the key functions of the services are as below:
 + About Us page
 + Contact us form
 
-<img src="/readme-images/bhc.png" alt = "Better | Health | Care" style="height: 800px; width: 800px;">
+<img src="static/readme-images/bhc.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 [View link to my project 4](#)
 
@@ -51,3 +51,14 @@ To complete the overall aim of website, 15 issues were created as specific tasks
 + Done
 
  My Projects and User Stories can be viewed here :  [Issues and Projects](https://github.com/Shanbashir1/Better-Health-Care/issues "Github Issues")
+
+ ## Project Design
+ ### Wireframes
+Balsamiq wireframes was used to design the wireframes used in the design phase of this project.
+
+[Balsamiq Wireframes](https://balsamiq.cloud/spvy67g/pamoowu/r671F?f=N4IgUiBcCMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D "Balsamiq Wireframes")
+
+### Database Diagram
+Lucid Charts was used to design the unique models used in this project.
+
+<img src="static/readme-images/Lucida_Better.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">

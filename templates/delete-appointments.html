@@ -4,10 +4,10 @@
 <form method="post" action=""> 
 {% csrf_token %} 
 
-<p>Please confirm cancellation of the appointment <strong class="fst-italic">{{ first_name }}</strong>? </p>
-  <button type="submit" class="btn btn-danger">Confirm</button>
+<p>Please confirm cancellation of the appointment <strong class="text-primary">{{ first_name }}</strong>?</p>
+  <button type="submit" class="btn btn-success">Confirm</button>
   <a href="{% url 'manage-appointments' %}">
-    <button type="button" class="btn btn-success">Cancel</button>
+    <button type="button" class="btn btn-danger">Cancel</button>
   </a>
 
 </form> 
