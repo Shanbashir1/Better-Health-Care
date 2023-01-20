@@ -17,6 +17,9 @@
     <!-- external css file -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Favicon Image -->
+    <link rel="icon" type="image/x-icon" href="static/image/favicon.ico.png">
+
     <title>Better Health Care</title>
 
   </head>
@@ -26,7 +29,7 @@
     <header>
       <!--Logo, Header and site navbar with sign in options  -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid" style="background-color: #150f0116;">
+        <div class="container-fluid" style="background-color: #eeeeee;">
           <a class="navbar-brand" href="{% url 'home' %}">
             <img class="img-thumbnail rounded-circle site-logo" src="{% static 'image/healthcare.jpeg' %}" , height="100" , width="120" alt="site logo">
             <span class="brand">B<span class="red-o">etter</span> | Health <span class="thin">
@@ -97,7 +100,7 @@
       </main>
       <!-- Footer -->
       <!-- Remove the container if you want to extend the Footer to full width. -->
-      <footer class="container-fluid" style="background-color: #150f0116;">
+      <footer class="container-fluid" style="background-color: #eeeeee;">
         <div class="container p-4">
           <div class="row">
             <div class="col-lg-6 col-md-12 mb-4">
@@ -155,7 +158,7 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://www.instagram.com/" target="_blank">
+                  <a href="https://www.instagram.com/" target="_blank"
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>

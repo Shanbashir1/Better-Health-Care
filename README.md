@@ -40,12 +40,12 @@ Some the key functions of the services are as below:
 3. Create a new user and bookings.
 4. Delete a user and bookings.
 5. Decline bookings 
-6. View outstaning appointments waiting for approval requests
+6. View outstanding appointments waiting for admin approval requests.
 7. View how many appointments on each date and with which doctor. 
 
 ## Agile Methodology
 An Agile Approach was used to develop this site. This was achieved by breaking the project down into smaller tasks.
-To complete the overall aim of website, 15 issues were created as specific tasks called User Stories. These User Stories are small sections of the project designed to accomplish a specific goal. Once the User Story was working effectively it was moved across the Kanban board, in the following working order. 
+To complete the overall aim of the website, 15 issues were created as specific tasks called User Stories. These User Stories are small sections of the project designed to accomplish a specific goal. Once the User Story was working effectively it was moved across the Kanban board, in the following working order. 
 + To do
 + In Progress
 + Done
@@ -62,3 +62,8 @@ Balsamiq wireframes was used to design the wireframes used in the design phase o
 Lucid Charts was used to design the unique models used in this project.
 
 <img src="static/readme-images/Lucida_Better.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
+### Colour Contrast
+The selection of the colours for the web page was chosen from Color Hex. The colour contrast tried to remain basic and have a good flow of similiar colours throughout the design. 
+
+<img src="static/readme-images/color-hex.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
