@@ -1,12 +1,15 @@
 import datetime
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from .forms import BookAppointmentForm
 from .models import BookAppointmentModel
+from django.views.generic import TemplateView
 
 
 
@@ -20,7 +23,7 @@ class Index(generic.TemplateView):
 Once the booking has been created, the user will be directed to the manage booking page. 
 The data recorded from the form will be displayed on the admin page.
 '''
-class BookAppointment(CreateView):
+class BookAppointment(LoginRequiredMixin, CreateView):
 
     form_class = BookAppointmentForm
     template_name = 'book_appointment.html'
@@ -39,6 +42,7 @@ class BookAppointment(CreateView):
                 notified via our manage booking page.")
         form.save()
         return HttpResponseRedirect('/manage-appointments/')
+
 
 '''
 The Manage page will allow the user to view the booking, if the user is logged in. .
@@ -80,7 +84,7 @@ class DeleteAppointment(DeleteView):
 '''
 The user will have a option to update the booking and view the updated changes. 
 '''
-class UpdateAppointment(UpdateView):
+class UpdateAppointment(LoginRequiredMixin, UpdateView):
     '''
     Handels update, if user wants to make any changes in already
     created appointment
@@ -89,3 +93,21 @@ class UpdateAppointment(UpdateView):
     template_name = 'update-appointments.html'
     form_class = BookAppointmentForm
     success_url = '/manage-appointments/'
+
+
+    def get(self, request, *args, **kwargs):
+        appointment = get_object_or_404(BookAppointmentModel, id=kwargs['pk'])
+        if appointment.patient != request.user:
+            # The users don't match
+            messages.error(request, "You do not have access to manage this booking.")
+            return redirect('manage-appointments')
+        else:
+            context = {'form': self.form_class(instance=appointment)}
+            return render(request, self.template_name, context)
+            
+class Page404(TemplateView):
+    template_name = '404.html'
+
+
+class Page500(TemplateView):
+    template_name = '500.html'

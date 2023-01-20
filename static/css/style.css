@@ -5,8 +5,10 @@ body {
 
 .navbar-brand {
     font-family: 'cairo', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
+
+}
+.navbar-nav {
+    font-size: 13px;
 }
 
 .nav-link:active,
