@@ -105,9 +105,8 @@ class UpdateAppointment(LoginRequiredMixin, UpdateView):
             context = {'form': self.form_class(instance=appointment)}
             return render(request, self.template_name, context)
             
-class Page404(TemplateView):
-    template_name = '404.html'
+def error_404_view(request, exception):
+    return render(request,'404.html')
 
-
-class Page500(TemplateView):
-    template_name = '500.html'
+def error_500_view(request):
+    return render(request,'500.html')
