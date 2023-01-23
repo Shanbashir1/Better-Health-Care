@@ -1,6 +1,3 @@
-'''
-Contact views
-'''
 from django.contrib import messages
 from django.views.generic.edit import FormView, CreateView, View
 from django.http import HttpResponseRedirect, request
@@ -19,9 +16,7 @@ class ContactUs(CreateView):
     fields = '__all__'
     success_url = reverse_lazy('contact')
 
-    '''
-    Sends the data back to the admin page 
-    '''
+    # Send data back to the admin page
     def form_valid(self, form):
         messages.success(
         self.request,

@@ -13,6 +13,8 @@
       {% if user.is_authenticated %} 
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
+
+      <!-- Form to create a booking and post information back to admin and manage booking --> 
           <form method="post"> 
             {% csrf_token %} 
             {{ form | crispy }}

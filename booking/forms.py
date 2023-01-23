@@ -9,12 +9,16 @@ CURRENT_DATE = str(datetime.date.today())
 
 class BookAppointmentForm(forms.ModelForm):
     '''
-    Handles book appointment form.
-    The Bootstrap datepicker library was installed, which makes
-    form looks more appealing
+    The BookAppointmentForm allows the users to enter data 
+    into the fields resulting information being 
+    transfered to the admin model.
     '''
 
     class Meta:
+        '''
+        The Fields will be displayed on the booking appointment page
+        for the user to enter his information.
+        '''
         model = BookAppointmentModel
         fields = ('title', 'first_name', 'last_name', 'nhs_number', 'email', 'created_date', 'doctor', 'message', 'urgent',)
 

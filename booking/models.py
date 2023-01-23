@@ -3,16 +3,21 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-# Users to select choices and options when booking appointment.
+# Choices created for users to be displayed options 
 
 STATUS = ((0, 'Waiting_Approval'), (1, 'Approved'), (2, 'Decline'))
 TITLE_STATUS = (('MR', 'Mr'),('MRS', 'Mrs'),('MS', 'Ms'),('MISS', 'Miss'))
 DR_NAME = (('DR KEEN', 'Dr Keen'),('DR PATEL', 'Dr Patel'),('DR REUBIN', 'Dr Reubin'),('DR WATSON', 'Dr Watson'))
 URGENCY = (('NOT URGENT', 'Not Urgent'), ('URGENT', 'Urgent'))
 
-# Appointment Model for user to book his/her details into the system
+
 
 class BookAppointmentModel(models.Model):
+    '''
+    The BookAppointmentModel allows the admin to receive information
+    relating to the patients, and created files and data for the
+    patients. .
+    '''
 
     title = models.CharField(max_length=4, choices=TITLE_STATUS)
     first_name = models.CharField(max_length=30)

@@ -12,26 +12,22 @@ from .models import BookAppointmentModel
 from django.views.generic import TemplateView
 
 
-
 class Index(generic.TemplateView):
 
     template_name = 'index.html'
 
 
-
-'''
-Once the booking has been created, the user will be directed to the manage booking page. 
-The data recorded from the form will be displayed on the admin page.
-'''
 class BookAppointment(LoginRequiredMixin, CreateView):
+    '''
+    Once the booking has been created, the user will be directed to the manage booking page. 
+    The data recorded from the form will be displayed on the admin page.
+    '''
 
     form_class = BookAppointmentForm
     template_name = 'book_appointment.html'
     success_url = reverse_lazy('book_appointment')
 
-    '''
-    Sends the data back to the admin page 
-    '''
+# Send information to the user
     def form_valid(self, form):
         form.instance.patient = self.request.user
         messages.success(
@@ -44,11 +40,10 @@ class BookAppointment(LoginRequiredMixin, CreateView):
         return HttpResponseRedirect('/manage-appointments/')
 
 
-'''
-The Manage page will allow the user to view the booking, if the user is logged in. .
-'''
 class ManageAppointment(generic.ListView):
-
+    '''
+    The Manage page will allow the user to view the booking, if the user is logged in. .
+    '''
     model = BookAppointmentModel
     template_name = 'manage-appointments.html'
     paginate_by = 3
@@ -63,31 +58,26 @@ class ManageAppointment(generic.ListView):
             patient=self.request.user).order_by("created_date")
 
 
-'''
-The delete page will allow the user to delete the booking, if they no longer require the appointment.
-'''
 class DeleteAppointment(DeleteView):
+    '''
+    The delete page will allow the user to delete the booking, if they no longer require the appointment.
+    '''
 
     model = BookAppointmentModel
     success_url = '/manage-appointments/'
     template_name = "delete-appointments.html"
 
     def deleted_appointment(self, request, pk, *args, **kwargs):
-        '''
-        methods handels delete
-        '''
+
+# The function below ables the user to delete his booking
         appointments = BookAppointmentModel.objects.get(
             pk=self.request.pk)
         appointments.delete()
 
 
-'''
-The user will have a option to update the booking and view the updated changes. 
-'''
 class UpdateAppointment(LoginRequiredMixin, UpdateView):
     '''
-    Handels update, if user wants to make any changes in already
-    created appointment
+    The user will have a option to update the booking and view the updated changes. 
     '''
     model = BookAppointmentModel
     template_name = 'update-appointments.html'
@@ -98,15 +88,17 @@ class UpdateAppointment(LoginRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         appointment = get_object_or_404(BookAppointmentModel, id=kwargs['pk'])
         if appointment.patient != request.user:
-            # The users don't match
+            # The user will be restricted to view other users booking, prompting a error
             messages.error(request, "You do not have access to manage this booking.")
             return redirect('manage-appointments')
         else:
             context = {'form': self.form_class(instance=appointment)}
             return render(request, self.template_name, context)
-            
+
+ # Function to alert a error 404 page           
 def error_404_view(request, exception):
     return render(request,'404.html')
 
+ # Function to alert a error 500 page   
 def error_500_view(request):
     return render(request,'500.html')

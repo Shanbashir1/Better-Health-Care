@@ -1,13 +1,11 @@
-'''
-Contact models
-'''
 from django.db import models
 
 
-
-
-
 class ContactModel(models.Model):
+    """
+    Contact Model returns data back to the admin page
+    information can be viewed.
+    """
 
     first_name = models.CharField(max_length = 50)
     last_name = models.CharField(max_length = 50)
