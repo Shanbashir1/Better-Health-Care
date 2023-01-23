@@ -257,6 +257,160 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + The user is displayed a message confirming they would like to sign out. 
 + If signed out is confirmed the user is signed out and restricted from viewing or creating any bookings.
 
+## Admin Model 
+<span style="color:blue">**The Admin sign in page**</span>
++ The Django Adminstration page requests the user to login 
++ The admin login is created by creating a superuser from the terminal
+<img src="static/readme-images/admin-signin.png" alt = "Admin Signin" style="height:180px; width: 100%;">
+
+<span style="color:blue">**The Admin Model**</span>
++ The admin models contains a list of created models in the app. 
++ The admin models have a list of action of data which has been inputed by the user.
++ Admin users have more functionality than regular users and have full CRUD functionality over information such as users and bookings. 
++ Only approved admin users can access this section of the site. It is accessed by adding /admin to the URL home page and signing in.
++ The admin models have all user information, which was entered during sign in and Book Appointments. 
++ Bookings and users can be deleted by the admin. 
++ Bookings can be approved and declined by the user. 
+<img src="static/readme-images/admin-model.png" alt = "Admin Signin" style="height:400px; width: 60%;">
+
+## Future Features 
+While creating the Project, I realised that the vast input I could add to the design to allow it to have more functionalities. As we have all learnt the timescope involved limits the overall scope. 
+
+<span style="color:blue">**What I can add as a Future Feature**</span>
++ Send a user a confirmation email once a registration has been made. 
++ Send a user a confirmation email once a booking has been made. 
++ Send a user a confirmation email once the admin has made any correspondence with the bookings, i.e Approved or decline. 
++ Allow the user to describe his illness to the doctor and for the admin i.e doctor to reply back to patients with treatments or remiedies. 
++ Sms Notifications updates and confirmations. 
+
+
+## Technologies
++ HTML - for the structure of the website
++ CSS - to provide styling to the page.
++ JavaScript  
++ Python - to write all the logic of the app
++ Django - used as main framework for the app, which both all backend and most frontend elements are built on.
++ Django-allauth: for handing all user models and login functionality.
++ Cloudinary: for saving images in cloudinary and serving them to the client.
++ Django-crispy-forms: for making the django forms look better.
++ ElephantSQL - used to manage a PostgreSQL database.
++ Bootstrap - Widely used for the design of the site
++ Jquery - to allow some functions to delay or prompt messages. 
++ Lucidchart used to make a database diagram.
++ Gitpod - used to connect a browser based VScode to github.
++ Github - used for version control and deployment of the website.
++ Heroku - to deploy the app.
++ JShint - used to validate javascript.
++ NuHtmlChecker - used to validate HTML.
++ Lighthouse - To check the following aspects of a URL: Performance, Progressive Web App, Accessibility, Best Practices and SEO.
++ Google Developer Tools - to view pages on different media screens and ammend changes as developing. 
++ Balsamiq Wireframes
+
+### Libraries
+#### Libraries/Module Installed
++ asgiref==3.6.0
++ bootstrap4==0.1.0
++ click==8.1.3
++ cloudinary==1.30.0
++ dj-database-url==1.2.0
++ dj3-cloudinary-storage==0.0.6
++ Django==3.2.16
++ django-allauth==0.52.0
++ django-bootstrap-datepicker-plus==5.0.2
++ django-crispy-forms==1.14.0
++ django-phone-field==1.8.1
++ django-summernote==0.8.20.0
++ django-widget-tweaks==1.4.12
++ Flask==2.2.2
++ gunicorn==20.1.0
++ itsdangerous==2.1.2
++ oauthlib==3.2.2
++ psycopg2==2.9.5
++ pydantic==1.10.4
++ PyJWT==2.6.0
++ python3-openid==3.2.0
++ pytz==2022.7
++ requests-oauthlib==1.3.1
++ sqlparse==0.4.3
++ Werkzeug==2.2.2
+
+## Security Features and Defensive Design
+### User authentication
++ Django's all auth was used for login and sign up functionality.
++ Django's superuser is used to limit access to admin panel.
+
+### Form Validation
+Extensive form validation is used on front end as well as backend.
+
+### Database Security
+All secret keys connecting to the database are stored in a env.py file that is never pushed to github. Furthermore, Cross-Site Request Forgery (CSFR) tokens were used on all forms throughout the project.
+
+## Deployment
+### Local Deployment
+To test the app locally, we took the following steps : 
+
++ In your project workspace folder, open a terminal
++ Run the command: python3 manage.py runserver
++ Hit the 'open browser' button or visit http://localhost:8000/ in the browser.
++ Open the browser and view the page.
+
+### Deployment Initial Stage (As advised by Code Institute)
+Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. The following steps needed to be performed:
+
++ Go to the Heroku's website.
++ Create an account if required or select log in.
++ From the Heroku dashboard, click on the “New” button in top righthand corner then "Create new app".
++ Enter a unique "App name" and "Choose a region" before clicking on "Create app".
++ Go to "Config Vars" under the "Settings" tab.
++ Click on "Reveals Config Vars" and enter the following information:
++ CLOUDINARY_URL : add your cloudinary key here.
++ DATABASE_URL : add the url from postgres database.
++ SECRET_KEY = a secret key for your app.
++ PORT : 8000
++DISABLE_COLLECTSTATIC = 1 during development (Remove when deploying production!)
++ Go to "Buildpacks" section and click "Add buildpack".
++ Select "/herokupython" and click "Save changes"
++ Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
++ Go to "Connect to GitHub" section and "Search" the repository to be deployed.
++ Click "Connect" next the repository name.
++ Choose "Automatic deploys" or "Manual deploys" to deploy your application.
+
+### PostgreSQL database: (ElephantSQL)
++ Log in to the ElephantSQL account 
++ Click "Create New Instance"
++ Set your plan, select Tiny Turtle Plan, leave tag field blank
++ Click on "Select Region" 
++ Click "Review"
++ Return to the ElephantSQL dashboard, and click on the database instance name for this project
++ Copy your ElephantSQL database Url 
+
+### Github
+#### Commit On Github:
++ To make my project I used gitpod worskspace, where first save all the files.
++ Then in the terminal type git add . to add all the changes inside the staging area.
++ The next step was git commit -m "changes I made" where I confirmed that what changes I want to make.
++ Last but not least, I have typed git push to save everything on Github.
+
+## Credits
+A list of my credits are below
+
++ Code Institue Learning guide and past coding examples
++ Django Blog
++ Learn Django Youtube
++ Learn Python, Youtube
++ W3schools.com - Help with Python coding.
++ stackoverflow.com - help with coding, by visiting past forums.
++ Slack - support from colleagues and mentors
++ Thorin - Flask project Bootstrap ideas
+
+
+## Acknowledgement
++ My mentor Rohit Sharma @rohit_mentor - Great advice and support throughout my project journey, I was guided well with plenty of advise and support.
++ Tutor Suport - So much help from a wide diversity of tutors. They were able to support me in good time and made me realise when things became difficult.
++ Slack - Always so much help from colleagues, the level of support is undoubtedly amazing.
+
+
+
 
 
 
