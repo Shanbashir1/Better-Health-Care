@@ -287,7 +287,7 @@ While creating the Project, I realised that the vast input I could add to the de
 ## Technologies
 + HTML - for the structure of the website
 + CSS - to provide styling to the page.
-+ JavaScript  
++ JavaScript - not used at the moment for this project.  
 + Python - to write all the logic of the app
 + Django - used as main framework for the app, which both all backend and most frontend elements are built on.
 + Django-allauth: for handing all user models and login functionality.
@@ -300,11 +300,14 @@ While creating the Project, I realised that the vast input I could add to the de
 + Gitpod - used to connect a browser based VScode to github.
 + Github - used for version control and deployment of the website.
 + Heroku - to deploy the app.
-+ JShint - used to validate javascript.
++ PEP8 Online Checker - Check all Python code and ammend errors and warnings. 
++ JShint - used to validate javascript/Jquery.
 + NuHtmlChecker - used to validate HTML.
++ W3C Jigsaw - CSS checker.
 + Lighthouse - To check the following aspects of a URL: Performance, Progressive Web App, Accessibility, Best Practices and SEO.
 + Google Developer Tools - to view pages on different media screens and ammend changes as developing. 
 + Balsamiq Wireframes
++ Responsive design
 
 ### Libraries
 #### Libraries/Module Installed
@@ -367,7 +370,7 @@ Before starting work, the project was deployed to Heroku. This was done early in
 + DATABASE_URL : add the url from postgres database.
 + SECRET_KEY = a secret key for your app.
 + PORT : 8000
-+DISABLE_COLLECTSTATIC = 1 during development (Remove when deploying production!)
++ DISABLE_COLLECTSTATIC = 1 during development (Remove when deploying production!)
 + Go to "Buildpacks" section and click "Add buildpack".
 + Select "/herokupython" and click "Save changes"
 + Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
@@ -401,17 +404,10 @@ A list of my credits are below
 + W3schools.com - Help with Python coding.
 + stackoverflow.com - help with coding, by visiting past forums.
 + Slack - support from colleagues and mentors
-+ Thorin - Flask project Bootstrap ideas
++ Thorin - Flask Walkthrough Project for Bootstrap ideas
 
 
 ## Acknowledgement
 + My mentor Rohit Sharma @rohit_mentor - Great advice and support throughout my project journey, I was guided well with plenty of advise and support.
 + Tutor Suport - So much help from a wide diversity of tutors. They were able to support me in good time and made me realise when things became difficult.
 + Slack - Always so much help from colleagues, the level of support is undoubtedly amazing.
-
-
-
-
-
-
-
