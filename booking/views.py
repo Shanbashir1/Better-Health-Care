@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from bootstrap_datepicker_plus.widgets import DateTimePickerInput
-from .forms import BookAppointmentForm
+from .forms import BookAppointmentForm, Updateform
 from .models import BookAppointmentModel
 from django.views.generic import TemplateView
 
@@ -81,7 +81,7 @@ class UpdateAppointment(LoginRequiredMixin, UpdateView):
     '''
     model = BookAppointmentModel
     template_name = 'update-appointments.html'
-    form_class = BookAppointmentForm
+    form_class = Updateform
     success_url = '/manage-appointments/'
 
 
@@ -94,6 +94,7 @@ class UpdateAppointment(LoginRequiredMixin, UpdateView):
         else:
             context = {'form': self.form_class(instance=appointment)}
             return render(request, self.template_name, context)
+
 
  # Function to alert a error 404 page           
 def error_404_view(request, exception):

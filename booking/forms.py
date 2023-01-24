@@ -39,5 +39,12 @@ class BookAppointmentForm(forms.ModelForm):
             ),
         }
 
+class Updateform(BookAppointmentForm):
+
+    first_name = forms.CharField(disabled=True)
+    last_name = forms.CharField(disabled=True)
+    nhs_number = forms.CharField(disabled=True)
+    doctor = forms.CharField(disabled=True)
+
                                         
         
