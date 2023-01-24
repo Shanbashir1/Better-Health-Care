@@ -23,12 +23,10 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid" style="background-color: #eeeeee;">
           <a class="navbar-brand" href="{% url 'home' %}">
-            <img class="img-thumbnail rounded-circle site-logo" src="https://res.cloudinary.com/dw6qbkciv/image/upload/v1674303213/Better%20Health%20Care/healthcare_wdko0t.jpg" , height="100" , width="120" alt="site logo">
+            <img class="img-thumbnail rounded-circle site-logo" src="https://res.cloudinary.com/dw6qbkciv/image/upload/v1674303213/Better%20Health%20Care/healthcare_wdko0t.jpg" alt="Logo">
             <span class="brand">B<span class="red-o">etter</span> | Health <span class="thin">
                 <i class="fa-solid fa-kit-medical"></i> | Care </span>
             </span>
-            </span>
-          </a>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,14 +76,17 @@
           </li>
           <!-- if user's logged in they can see manage_bookings template --> {% if user.is_authenticated %} <li class="nav-item nav-bg-design">
             <a class="nav-link" href="{% url 'manage-appointments' %}">My Bookings</a>
-          </li> {% endif %} <li class="nav-item nav-bg-design">
+          </li> 
+          {% endif %} 
+          <li class="nav-item nav-bg-design">
             <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
           </li>
         </ul>
       </div>
-      <main class="flex-shrink-0 main-bg"> {% block content %}
-        <!-- Content Goes here --> {% endblock content %}
-      </main>
+      </header>
+        {% block content %}
+        {% endblock content %}
+    
       <!-- Footer with links to pages-->
       <footer class="container-fluid" style="background-color: #eeeeee;">
         <div class="container p-4">
@@ -94,7 +95,6 @@
               <h5 class="mb-3 text-dark">
                 <span class="brand">B<span class="red-o">etter</span> | Health <span class="thin">
                     <i class="fa-solid fa-kit-medical"></i> | Care </span>
-                </span>
                 </span>
               </h5>
               <p> Our vision at Better Health Care is to provide the highest standard of patient focused healthcare for our community,
@@ -117,18 +117,19 @@
                 </li> {% endif %} <li class="mb-1">
                   <a href="{% url 'contact' %}" style="color: #4f4f4f;">Contact Us</a>
                 </li>
-            </div>
+              </ul>
+             </div>
             <div class="col-lg-3 col-md-6 mb-4">
               <h5 class="mb-1 text-dark">Opening Hours</h5>
               <table class="table" style="border-color: #666;">
-                <tbody>
+                <tbody id="opening">
                   <tr>
-                    <td id="opening">Mon - Fri:</td>
-                    <td id="opening">8am - 6pm</td>
+                    <td>Mon - Fri:</td>
+                    <td>8am - 6pm</td>
                   </tr>
                   <tr>
-                    <td id="opening">Sat - Sun:</td>
-                    <td id="opening">8am - 11am</td>
+                    <td>Sat - Sun:</td>
+                    <td>8am - 11am</td>
                   </tr>
                 </tbody>
               </table>
@@ -149,7 +150,8 @@
                   </a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://www.instagram.com/" target="_blank" <i class="fa-brands fa-instagram"></i>
+                  <a href="https://www.instagram.com/" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li class="list-inline-item">
@@ -167,8 +169,10 @@
                 <p>&copy;Better Health Care <span class="Copyright">Copyright 2023</span>
                 </p>
               </div>
+            </div>
+            </div>
+          </div>
       </footer>
-      </div>
       <!-- jquery -->
       <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
       <!-- Bootstrap JavaScript -->

@@ -27,6 +27,16 @@ body {
     font-size: 15px;
 }
 
+.site-logo {
+    height: 100px;
+    width: 150px;
+}
+
+.background-image {
+    height: 100%;
+    width: 100%;
+}
+
 /* About Us Page */
 
 header.about_page {
@@ -51,6 +61,8 @@ header.about_page {
 
 .site-logo {
     display: none;
+    height: 20px;
+    width: 30px;
 }
 
 body {

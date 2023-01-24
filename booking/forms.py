@@ -40,11 +40,19 @@ class BookAppointmentForm(forms.ModelForm):
         }
 
 class Updateform(BookAppointmentForm):
+    '''
+    This will restrict the user to change certain fields
+    The code was added to keep the form similar to the original booking 
+    rather than allow the user to change all the fields and make the booking
+    seem like new.
+    '''
 
     first_name = forms.CharField(disabled=True)
     last_name = forms.CharField(disabled=True)
     nhs_number = forms.CharField(disabled=True)
     doctor = forms.CharField(disabled=True)
+    title = forms.CharField(disabled=True)
+    email = forms.CharField(disabled=True)
 
                                         
         
