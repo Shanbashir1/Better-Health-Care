@@ -3,13 +3,13 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-# Choices created for users to be displayed options 
+# Choices created for users to be displayed options
 
 STATUS = ((0, 'Waiting_Approval'), (1, 'Approved'), (2, 'Decline'))
-TITLE_STATUS = (('MR', 'Mr'),('MRS', 'Mrs'),('MS', 'Ms'),('MISS', 'Miss'))
-DR_NAME = (('DR KEEN', 'Dr Keen'),('DR PATEL', 'Dr Patel'),('DR REUBIN', 'Dr Reubin'),('DR WATSON', 'Dr Watson'))
+TITLE_STATUS = (('MR', 'Mr'), ('MRS', 'Mrs'), ('MS', 'Ms'), ('MISS', 'Miss'))
+DR_NAME = (('DR KEEN', 'Dr Keen'), ('DR PATEL', 'Dr Patel'), \
+           ('DR REUBIN', 'Dr Reubin'), ('DR WATSON', 'Dr Watson'))
 URGENCY = (('NOT URGENT', 'Not Urgent'), ('URGENT', 'Urgent'))
-
 
 
 class BookAppointmentModel(models.Model):
@@ -34,11 +34,10 @@ class BookAppointmentModel(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     doctor = models.CharField(max_length=20, choices=DR_NAME)
     admin_decision = models.BooleanField(default=False)
-    
 
     class Meta:
         ordering = ['-created_date']
         verbose_name = ("Book Appointment Model")
 
     def __str__(self):
-        return str (self.first_name)
+        return str(self.first_name)

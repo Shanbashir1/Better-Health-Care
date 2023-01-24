@@ -19,8 +19,8 @@ class ContactUs(CreateView):
     # Send data back to the admin page
     def form_valid(self, form):
         messages.success(
-        self.request,
-        "Thank you for contacting us, your feedback and comments \
+            self.request,
+            "Thank you for contacting us, your feedback and comments \
         have been forwarded onto a member of our team who \
         will be contacting you shortly.")
         form.save()

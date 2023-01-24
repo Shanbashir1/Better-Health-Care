@@ -27,11 +27,13 @@ body {
     font-size: 15px;
 }
 
+/* Site Logo */
 .site-logo {
     height: 100px;
     width: 150px;
 }
 
+/* Background Image for Index Html  */
 .background-image {
     height: 100%;
     width: 100%;
