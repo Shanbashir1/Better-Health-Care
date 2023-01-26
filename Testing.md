@@ -41,21 +41,8 @@
     + [Login Page](#login-page)
     + [Register Page](#register-page)
     + [Logout Page](#logout)
+    + [Django Admin Page](#admin-page)
 
-
-
-Manual Testing
-Site Navigation
-Home Page
-About Page
-Treatments Page
-Gallery Page
-Book page
-Contact page
-User Dashboard
-Automated testing
-Running the test suite
-Bugs
 ## Testing & Validation Checks 
 
 
@@ -305,3 +292,20 @@ The About page did not consist of any testing methods as it contained the same f
 | Contact Us              | Contact Us Admin          | View               | Be able to view customers feedback and information                         | Pass      |
 | Contact Us              | Contact Us Admin          | Delete             | Be able to delete contact us feedback from users.                          | Pass      |
 | Logout                  | Home Page Admin           | Logout             | Be able to logout successfully                                             | Pass      |
+
+
+## Bugs 
+
+### Fixed Bugs 
+| Element | Location            | Action         | Expected Result                                                                    | Pass/Fail |
+| ------- | ------------------- | -------------- | ---------------------------------------------------------------------------------- | --------- |
+| Bug     | Update Booking Page | Disbale Fields | To disable the First Name, Last Name, Email, Nhs Number, Doctor fields for editing | Pass      |
+
++ This particular bug was realised during testing. I realised that all my fields could be ammended including the name of the patient, which became difficult for an admin to realise the original booking user. I had to put in a defensive line of code and so I added a disabled field onto the forms.py which restricted the fields when making changes to existing bookings. 
+
+<img src="static/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+
+
+### Unfixed Bugs
+
+Fortunately I did not have any bugs which I was not able to fix, I set myself targets and with a thorough testing plan I was able to eliminate all bugs and errors, which were identified during building my project.

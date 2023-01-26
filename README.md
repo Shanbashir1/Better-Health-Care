@@ -1,5 +1,48 @@
 # Project 4 - Better | Health | Care - A Online Booking System for Patients.
 
+
+## Table of content
++ [Introduction](#introduction)
++ [User Experience](#user-experience---ux)
++ [Agile Methodology](#agile-methodology)
++ [Wireframes](#wireframes)
++ [Database Diagram](#database-diagram)
++ [Color Contrast](#colour-contrast)
++ [Site Features](#site-features)
+    + [Favicon Icon](#favicon-icon)
+    + [Header](#header)
+    + [Footer](#footer)
+    + [Site Navigation](#site-navigation)
+    + [Home Page](#home-page)
+    + [About Us Page](#about-us-page)
+    + [Booking Appointment Page](#booking-appointment-page-create-booking)
+    + [Manage Booking Page](#manage-booking-page-readview-booking)
+    + [Update Booking Page](#update-booking-page-update-booking)
+    + [Delete Booking Page](#delete-booking-page-delete-booking)
+    + [Contact us Page](#contact-us-page)
+    + [Sign In](#sign-in--login)
+    + [Register](#register)
+    + [Sign Out](#logout)
+    + [Admin](#admin-model)
+
++ [Future Features](#future-features)
++ [Testing](#testing)
++ [Technologies](#technologies)
++ [Libraries](#libraries)
++ [Security Features](#security-features-and-defensive-design)
++ [Form Features](#form-feature--validation)
++ [Database Security](#database-security)
++ [Deployment](#deployment)
+    + [Local Deployment](#local-deployment)
+    + [Heroku Deployment](#heroku-deployment-initial-stage-as-advised-by-code-institute)
+    + [Elephant Postgressql](#postgresql-database-elephantsql)
+    + [Github](#github)
+
++ [Credits](#credits)
++ [Acknowledgement](#acknowledgement)
+
+
+
 ## Introduction
 ```diff 
 Better | Health | Care - A  Django Framework Project with the implementation of CRUD (Create, Read, Update, Delete)
@@ -50,23 +93,49 @@ To complete the overall aim of the website, 15 issues were created as specific t
 + In Progress
 + Done
 
+<img src="static/readme-images/user-stories.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+
+All my user stories were completed and succesfully actioned. The design was based on the Agile Methodology.
+
+
  My Projects and User Stories can be viewed here :  [Issues and Projects](https://github.com/Shanbashir1/Better-Health-Care/issues "Github Issues")
 
- ## Project Design
- ### Wireframes
-Balsamiq wireframes was used to design the wireframes used in the design phase of this project.
+
+## Wireframes
+Balsamiq wireframes was used to design the wireframes in the design phase of this project.
+
++ Home Page design
+
+<img src="static/wireframes-images/home.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
++ About Us Page design
+
+<img src="static/wireframes-images/about-us.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
++ Booking Appointment design
+
+<img src="static/wireframes-images/book-appointment.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
++ Manage Booking Page design
+
+<img src="static/wireframes-images/manage.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
++ Login Page design
+
+<img src="static/wireframes-images/login.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+
 
 [Balsamiq Wireframes](https://balsamiq.cloud/spvy67g/pamoowu/r671F?f=N4IgUiBcCMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D "Balsamiq Wireframes")
 
-### Database Diagram
+## Database Diagram
 Lucid Charts was used to design the unique models used in this project.
 
-<img src="static/readme-images/Lucida_Better.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="static/readme-images/lucida-diagram.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
-### Colour Contrast
+## Colour Contrast
 The selection of the colours for the web page was chosen from Color Hex. The colour contrast tried to remain basic and have a good flow of similiar colours throughout the design. 
 
-<img src="static/readme-images/color-hex.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="static/readme-images/color-hex.png" alt = "Color Contrast" style="height: 400px; width: 100%;">
 
 ## Site Features 
 
@@ -97,6 +166,8 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 ### Site Navigation
 <img src="static/readme-images/menubar.png" alt = "Menu" style="height:400px; width: 100%;">
+
+
 
 + Site Navigation is available on both the header and the footer. 
 + On mobile devices the menu icon drops down, and on the full screen desktop devices the navigation bar remains fixed. 
@@ -283,6 +354,9 @@ While creating the Project, I realised that the vast input I could add to the de
 + Allow the user to describe his illness to the doctor and for the admin i.e doctor to reply back to patients with treatments or remiedies. 
 + Sms Notifications updates and confirmations. 
 
+## Testing 
+All of the testing and validation for the project can be viewed here [Testing and Validation](Testing.md)
+
 
 ## Technologies
 + HTML - for the structure of the website
@@ -342,8 +416,9 @@ While creating the Project, I realised that the vast input I could add to the de
 + Django's all auth was used for login and sign up functionality.
 + Django's superuser is used to limit access to admin panel.
 
-### Form Validation
-Extensive form validation is used on front end as well as backend.
+### Form Feature & Validation
++ Crispy Form was used for the front end. 
++ Extensive form validation is used on front end as well as backend.
 
 ### Database Security
 All secret keys connecting to the database are stored in a env.py file that is never pushed to github. Furthermore, Cross-Site Request Forgery (CSFR) tokens were used on all forms throughout the project.
@@ -357,7 +432,7 @@ To test the app locally, we took the following steps :
 + Hit the 'open browser' button or visit http://localhost:8000/ in the browser.
 + Open the browser and view the page.
 
-### Deployment Initial Stage (As advised by Code Institute)
+### Heroku Deployment Initial Stage (As advised by Code Institute)
 Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. The following steps needed to be performed:
 
 + Go to the Heroku's website.
@@ -388,7 +463,6 @@ Before starting work, the project was deployed to Heroku. This was done early in
 + Copy your ElephantSQL database Url 
 
 ### Github
-#### Commit On Github:
 + To make my project I used gitpod worskspace, where first save all the files.
 + Then in the terminal type git add . to add all the changes inside the staging area.
 + The next step was git commit -m "changes I made" where I confirmed that what changes I want to make.
@@ -399,12 +473,15 @@ A list of my credits are below
 
 + Code Institue Learning guide and past coding examples
 + Django Blog
++ Testing Module for Code Institue
 + Learn Django Youtube
 + Learn Python, Youtube
 + W3schools.com - Help with Python coding.
 + stackoverflow.com - help with coding, by visiting past forums.
 + Slack - support from colleagues and mentors
 + Thorin - Flask Walkthrough Project for Bootstrap ideas
++ Pexels.com for Images 
+
 
 
 ## Acknowledgement
