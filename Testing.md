@@ -42,6 +42,11 @@
     + [Register Page](#register-page)
     + [Logout Page](#logout)
     + [Django Admin Page](#admin-page)
+    + [404 Error Page](#404-error-page)
+
++ [Bugs](#bugs)
+    + [Fixed Bugs](#fixed-bugs)
+    + [Unfixed Bugs](#unfixed-bugs)
 
 ## Testing & Validation Checks 
 
@@ -294,6 +299,16 @@ The About page did not consist of any testing methods as it contained the same f
 | Logout                  | Home Page Admin           | Logout             | Be able to logout successfully                                             | Pass      |
 
 
+#### 404 Error Page
+
+| Element           | Location | Action          | Expected Result                                                                       | Pass/Fail |
+| ----------------- | -------- | --------------- | ------------------------------------------------------------------------------------- | --------- |
+| Page not found    | 404 Page | View            | Any page not recognised or typing error the page will direct the user to the 404 page | Pass      |
+| Url error         | 404 page | view            | Any URL not correctly displayed will take the user to the 404 page                    | Pass      |
+| Home Page Buttton | 404 page | Click + Display | The home page button redirects the user from the 404 page back to the home page       | Pass      |
+
+<img src="static/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">|
+
 ## Bugs 
 
 ### Fixed Bugs 
@@ -304,6 +319,18 @@ The About page did not consist of any testing methods as it contained the same f
 + This particular bug was realised during testing. I realised that all my fields could be ammended including the name of the patient, which became difficult for an admin to realise the original booking user. I had to put in a defensive line of code and so I added a disabled field onto the forms.py which restricted the fields when making changes to existing bookings. 
 
 <img src="static/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+
+| Element | Location            | Action               | Expected Result                                                 | Pass/Fail |
+| ------- | ------------------- | -------------------- | --------------------------------------------------------------- | --------- |
+| Bug    | Update Booking Page | Authentication error | No other user to be able to access any other users booking page | Pass      |
+
++ The issue with the following bug was that any user was able to add a exisiting booking number to update-appointment and access it i.e url followed by update-appointment/7 or update-appointment/8 etc. This was a authentication error and serious error/bug that had to be rectified as other user were able to see each others appointments and data. The issue was eventually rectified with some defensive code in my booking app, view.py file, Class updateAppointments section, this restricted any user not assigned to the booking to change the url and view another users booking. If they tried to view a booking not belonging to them the user would receive a message informing them that they do not have access to this booking. 
+
+<img src="static/testing-images/bug-error.png" alt = "Better | Health | Care" style="height: 300px; width: 100%;">
+
++ After the bug issue has been resolved 
+
+<img src="static/testing-images/bugs.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 
 ### Unfixed Bugs

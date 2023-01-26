@@ -9,7 +9,7 @@ class BookAppointmentAdmin(admin.ModelAdmin):
     The admin page, will display benefit search and actions filters \
     for the site admin.
     '''
-    list_display = ('title', 'first_name', 'last_name', 'email', 'created_on',
+    list_display = ('title', 'first_name', 'last_name', 'patient', 'email', 'created_on',
                     'status')
     list_filter = ('admin_decision', 'created_on')
     search_fields = ('first_name', 'surname')

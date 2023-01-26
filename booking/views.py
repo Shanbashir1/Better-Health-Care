@@ -31,7 +31,13 @@ class BookAppointment(LoginRequiredMixin, CreateView):
 # Send information to the user
     def form_valid(self, form):
         form.instance.patient = self.request.user
-        messages.success(
+        (BookAppointmentModel.objects.filter(patient=self.request.user))
+        appointments = BookAppointmentModel.objects.filter(patient=self.request.user, status=0)
+        if appointments:
+             messages.error(self.request, "You already have a booking under this name")
+             return HttpResponseRedirect('/manage-appointments/')
+        else:
+             messages.success(
             self.request,
             "Thank you for your booking request, your booking \
             has been forwarded onto our booking team \
