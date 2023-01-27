@@ -53,19 +53,19 @@
 
 ### HTML Testing using NU-HTML-CHECKER
 
-<img src="static/testing-images/html-validator.png" alt = "Admin Signin" style="height:300px; width: 100%;">
+<img src="static/testing-images/html-validator.png" alt = "Html Testing" style="height:300px; width: 100%;">
 
 + All my pages was checked via nu-html-checker, initally i got 38 errors, mostly due to unclosed div tags or stray tags, these were quickly rectified and the code was rechecked and recieved no errors or warnings. 
 
 ### CSS Validator using JIGSAW.W3
 
-<img src="static/testing-images/jigsaw-css-validator.png" alt = "Admin Signin" style="height:300px; width: 100%;">
+<img src="static/testing-images/jigsaw-css-validator.png" alt = "Jigsaw CSS" style="height:300px; width: 100%;">
 
 + All my CSS was checked via Jigsaw W3.org, luckily I received no errors or warnings.  
 
 ### Javascript & JQuery using JSHINT 
 
-<img src="static/testing-images/jshint.png" alt = "Admin Signin" style="height:300px; width: 100%;">
+<img src="static/testing-images/jshint.png" alt = "Jshint" style="height:300px; width: 100%;">
 
 + Although I did not have much Javascript, the code that I did have was checked on Jshint, by pasting the code in. I did initially have 8 warnings, as my code required semi-colons, this was rectified and the code was retested, and received no errors. I did however receive One undefined variable but checking with tutor support that this was because of the jquery and has no bearing affect to the validation
 
@@ -125,7 +125,7 @@
 ## Lighthouse Testing 
 
 #### Lighthouse Testing - Home Page
-<img src="static/testing-images/Home-lighthouse.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="static/testing-images/Home-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 + The test were carried out by using the Lighthouse checker, which evaluates and scores the site on the following categories: 
     + Performance
@@ -135,17 +135,17 @@
 
 + Lighthouse can be accessed from the google dev tools page.
 #### Lighthouse Testing - About Us Page
-<img src="static/testing-images/about-lighthouse.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="static/testing-images/about-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 #### Lighthouse Testing - Booking Appointment Page
-<img src="static/testing-images/bookingappointment-lighthouse.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="static/testing-images/bookingappointment-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 
 #### Lighthouse Testing - Manage Appointment Page
-<img src="static/testing-images/manage-lighthouse.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="static/testing-images/manage-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 #### Lighthouse Testing - Contact Us Page
-<img src="static/testing-images/contactus-lighthouse.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="static/testing-images/contactus-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 ## Browser Testing 
 The project was tested extensively on Google Chrome and Safari browsers, where no browser compatibility issues came up.
@@ -331,6 +331,14 @@ The About page did not consist of any testing methods as it contained the same f
 + After the bug issue has been resolved 
 
 <img src="static/testing-images/bugs.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+
+| Element | Location                 | Action               | Expected Result                                                                      | Pass/Fail |
+| ------- | ------------------------ | -------------------- | ------------------------------------------------------------------------------------ | --------- |
+| Bugs    | Booking Appointment Page | Authentication error | Restrict user from booking again while they have a booking already awaiting approval | Pass      |
+
++ Again, while conducting manual testing I realised that the site could benefit from some defensive program, which blocks user from booking again while they have a awaiting appointments. I introduced a function which stopped users from booking again, and alerted the user that they already have an appoinment with that name. The message alerted the user and took them back to Manage appointments.
+
+<img src="static/testing-images/bug3.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 
 ### Unfixed Bugs

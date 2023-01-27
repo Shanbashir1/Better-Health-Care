@@ -32,14 +32,19 @@ class BookAppointment(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.patient = self.request.user
         (BookAppointmentModel.objects.filter(patient=self.request.user))
-        appointments = BookAppointmentModel.objects.filter(patient=self.request.user, status=0)
+        appointments = \
+            BookAppointmentModel.objects.filter(patient=self.request.user, \
+                                                status=0)
+        # Restricts the user to place another booking while it
+        # already has a pending appointment
         if appointments:
-             messages.error(self.request, "You already have a booking under this name")
-             return HttpResponseRedirect('/manage-appointments/')
+            messages.error(self.request, "You already have a booking \
+                                           under this name")
+            return HttpResponseRedirect('/manage-appointments/')
         else:
-             messages.success(
-            self.request,
-            "Thank you for your booking request, your booking \
+            messages.success(
+             self.request,
+             "Thank you for your booking request, your booking \
             has been forwarded onto our booking team \
             if your appointment has been approved, you will be \
                 notified via our manage booking page.")
