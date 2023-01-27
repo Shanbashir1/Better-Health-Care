@@ -44,6 +44,8 @@
     + [Django Admin Page](#admin-page)
     + [404 Error Page](#404-error-page)
 
++ [Automated Testing](#404-error-page)
+
 + [Bugs](#bugs)
     + [Fixed Bugs](#fixed-bugs)
     + [Unfixed Bugs](#unfixed-bugs)
@@ -308,6 +310,14 @@ The About page did not consist of any testing methods as it contained the same f
 | Home Page Buttton | 404 page | Click + Display | The home page button redirects the user from the 404 page back to the home page       | Pass      |
 
 <img src="docs/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">|
+
+## Automated Testing
+I managed to get some automated tests done for my project. Ideally I wanted to use the automated testing way of coding as this prevents writing additional code which may not be required. However they way I started my project, prevented me from this approach. Automated Testing is handy in case packages need upgrading, or major changes to the app are made. In this case, automated tests can be run first, to find obvious errors caused by the changes. After that, manual testing should still be performed.
+
++ 10 Automated tests were carried out all together - all resulting in passes. 
++ A coverage report was also carried out and hopefully in the near future, I can complete all the test to result it as 100%.
+
+<img src="docs/testing-images/coverage-report.png" alt = "Automated Testing" style="height:300px; width: 100%;">|
 
 ## Bugs 
 
