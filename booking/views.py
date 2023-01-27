@@ -38,8 +38,10 @@ class BookAppointment(LoginRequiredMixin, CreateView):
         # Restricts the user to place another booking while it
         # already has a pending appointment
         if appointments:
-            messages.error(self.request, "You already have a booking \
-                                           under this name")
+            messages.error(self.request, "You already have a \
+                pending appointment waiting for approval you \
+                must wait for the appointment to be approved \
+                before you can make a new booking.")
             return HttpResponseRedirect('/manage-appointments/')
         else:
             messages.success(
@@ -87,6 +89,18 @@ class DeleteAppointment(DeleteView):
         appointments = BookAppointmentModel.objects.get(
             pk=self.request.pk)
         appointments.delete()
+
+
+    def get(self, request, *args, **kwargs):
+        appointment = get_object_or_404(BookAppointmentModel, id=kwargs['pk'])
+        if appointment.patient != request.user:
+            # The user will be restricted to view other users booking,
+            # prompting a error
+            messages.error(request, "You do not have access to delete \
+            this booking.")
+            return redirect('manage-appointments')
+        else:
+            return render(request, self.template_name)
 
 
 class UpdateAppointment(LoginRequiredMixin, UpdateView):

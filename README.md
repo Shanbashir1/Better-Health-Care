@@ -60,7 +60,7 @@ Some the key functions of the services are as below:
 + About Us page
 + Contact us form
 
-<img src="static/readme-images/bhc.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/readme-images/bhc.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 [View link to my project 4](https://better-health-care.herokuapp.com/)
 
@@ -93,7 +93,7 @@ To complete the overall aim of the website, 15 issues were created as specific t
 + In Progress
 + Done
 
-<img src="static/readme-images/user-stories.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+<img src="docs/readme-images/user-stories.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 All my user stories were completed and succesfully actioned. The design was based on the Agile Methodology.
 
@@ -106,23 +106,23 @@ Balsamiq wireframes was used to design the wireframes in the design phase of thi
 
 + Home Page design
 
-<img src="static/wireframes-images/home.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/wireframes-images/home.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 + About Us Page design
 
-<img src="static/wireframes-images/about-us.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/wireframes-images/about-us.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 + Booking Appointment design
 
-<img src="static/wireframes-images/book-appointment.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/wireframes-images/book-appointment.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 + Manage Booking Page design
 
-<img src="static/wireframes-images/manage.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/wireframes-images/manage.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 + Login Page design
 
-<img src="static/wireframes-images/login.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/wireframes-images/login.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 
 [Balsamiq Wireframes](https://balsamiq.cloud/spvy67g/pamoowu/r671F?f=N4IgUiBcCMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D "Balsamiq Wireframes")
@@ -130,24 +130,24 @@ Balsamiq wireframes was used to design the wireframes in the design phase of thi
 ## Database Diagram
 Lucid Charts was used to design the unique models used in this project.
 
-<img src="static/readme-images/lucida-diagram.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
+<img src="docs/readme-images/lucida-diagram.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 ## Colour Contrast
 The selection of the colours for the web page was chosen from Color Hex. The colour contrast tried to remain basic and have a good flow of similiar colours throughout the design. 
 
-<img src="static/readme-images/color-hex.png" alt = "Color Contrast" style="height: 400px; width: 100%;">
+<img src="docs/readme-images/color-hex.png" alt = "Color Contrast" style="height: 400px; width: 100%;">
 
 ## Site Features 
 
 ### Favicon Icon 
-<img src="static/readme-images/favicon.ico.png" alt = "Favicon" style="height: 200px; width: 30%;">
+<img src="docs/readme-images/favicon.ico.png" alt = "Favicon" style="height: 200px; width: 30%;">
 
 + The selected icon was a image of a heart pulse , as you would see relating to the healthcare provision. 
 + The image is displayed on all the pages, throughout the website to give a unique design for the users
 + The favicon image is a design which contributes to the overall web design
 
 ### Header
-<img src="static/readme-images/header.png" alt = "Header" style="height:50px; width: 100%;">
+<img src="docs/readme-images/header.png" alt = "Header" style="height:50px; width: 100%;">
 
 + The header is located at the top of the page, displaying the logo, The clinics name and the Navigation links. 
 + The color used for the header was #eeeee, which was the main color used throughout the site. 
@@ -155,7 +155,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + The header contained a bolder font function when hovering over the navigation bar.
 
 ### Footer
-<img src="static/readme-images/footer.png" alt = "Footer" style="height:200px; width: 100%;">
+<img src="docs/readme-images/footer.png" alt = "Footer" style="height:200px; width: 100%;">
 
 + The footer contains quite a few links and information for the users
 + Information text to support the user and give a insight on the what the clinic has to offer.
@@ -165,7 +165,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + A clear header showing "Visit us" is also on the footer, with the address, to make aware to the user the location of the clinic. 
 
 ### Site Navigation
-<img src="static/readme-images/menubar.png" alt = "Menu" style="height:400px; width: 100%;">
+<img src="docs/readme-images/menubar.png" alt = "Menu" style="height:400px; width: 100%;">
 
 
 
@@ -182,9 +182,9 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 8. Manage Appointments - Appears Once Logged in
 
 ### Home Page
-<img src="static/readme-images/homepage-1.png" alt = "Home Page" style="height:400px; width: 100%;">
+<img src="docs/readme-images/homepage-1.png" alt = "Home Page" style="height:400px; width: 100%;">
 
-<img src="static/readme-images/homepage-2.png" alt = "Home Page" style="height:400px; width: 100%;">
+<img src="docs/readme-images/homepage-2.png" alt = "Home Page" style="height:400px; width: 100%;">
 
 + The homepage includes a image of a patient and a doctor having a consultation. The image was improted from pexels.com
 + The homepage has some text to reflect to the user as why they should choose the clinic. The text is a small paragraphy showing the user data and feature of clinic. 
@@ -193,8 +193,8 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + Bootstrap 4 was used to design the Home page with some minor adjustments using internal CSS. 
 
 ### About Us Page
-<img src="static/readme-images/about-1.png" alt = "About Us" style="height:800px; width: 50%;">
-<img src="static/readme-images/about-2.png" alt = "About Us" style="height:400px; width: 100%;">
+<img src="docs/readme-images/about-1.png" alt = "About Us" style="height:800px; width: 50%;">
+<img src="docs/readme-images/about-2.png" alt = "About Us" style="height:400px; width: 100%;">
 
 
 + The about page was designed to give the user a background and detail of the clinics services and values. 
@@ -203,8 +203,8 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + The text was designed using bullets points and gave the user a clear indication of the clinics values and care requirements. 
 
 ### Booking Appointment Page (Create Booking)
-<img src="static/readme-images/ba-signin.png" alt = "Signin" style="height:300px; width: 100%;">
-<img src="static/readme-images/ba-signin2.png" alt = "Signin" style="height:700px; width: 70%;">
+<img src="docs/readme-images/ba-signin.png" alt = "Signin" style="height:300px; width: 100%;">
+<img src="docs/readme-images/ba-signin2.png" alt = "Signin" style="height:700px; width: 70%;">
 
 + The Booking Appointmment page does not allow a user to book any appointment untill he has signed in. So a user would need to register or sign in before accessing the booking appointment form
 + Once the user has signed they are navigated to the booking form, were they can make a booking. 
@@ -221,11 +221,11 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 9. Urgent (Drop down urgent option)
 + The Booking form if completed correctly will forward the user to the manage booking page. Otherwise it will request the user to correctly complete all the fields.
 + The user is also send a message once the booking has been made 
-<img src="static/readme-images/success-booking.png" alt = "Approved" style="height:200px; width: 100%;">
+<img src="docs/readme-images/success-booking.png" alt = "Approved" style="height:200px; width: 100%;">
 
 ### Manage Booking Page (Read/View Booking)
 <span style="color:blue">**If a appointment has been approved by the admin**</span>
-<img src="static/readme-images/approved.png" alt = "Approved" style="height:200px; width: 100%;">
+<img src="docs/readme-images/approved.png" alt = "Approved" style="height:200px; width: 100%;">
 
 + So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. Once the booking has been approved, the Approved notification will be displayed to the users, depending if the user is logged in. 
 + A font Awesome thumbs up icon was used to design the Approved notification.
@@ -238,7 +238,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 5. Urgent / Not Urgent 
 
 <span style="color:blue">**If a appointment has been declined by the admin**</span>
-<img src="static/readme-images/decline.png" alt = "Decline" style="height:200px; width: 100%;">
+<img src="docs/readme-images/decline.png" alt = "Decline" style="height:200px; width: 100%;">
 
 + So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. If the  booking has been declined, the decline notification will be displayed to the users, depending if the user is logged in. 
 + A font Awesome thumbs down icon was used to design the Approved notification.
@@ -251,7 +251,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 5. Urgent / Not Urgent 
 
 <span style="color:blue">**If a appointment has been booked and awaiting approval by the admin**</span>
-<img src="static/readme-images/waiting-approval.png" alt = "Waiting Approval" style="height:200px; width: 100%;">
+<img src="docs/readme-images/waiting-approval.png" alt = "Waiting Approval" style="height:200px; width: 100%;">
 
 + So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. If the booking has not been viewed by the admin, the booking will remain in it orginal waiting approval stage, this depending if the user is logged in. 
 + A font Awesome clock icon was used to design the waiting-approval notification.
@@ -265,24 +265,24 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + The user is also offered a pagination of 3 booking history per page. Which they can access by pressing the next or previous button. 
 
 ### Update Booking Page (Update Booking)
-<img src="static/readme-images/update-booking1.png" alt = "Update Booking" style="height:200px; width: 100%;">
+<img src="docs/readme-images/update-booking1.png" alt = "Update Booking" style="height:200px; width: 100%;">
 
-<img src="static/readme-images/update-booking2.png" alt = "Update Booking" style="height:200px; width: 100%;">
+<img src="docs/readme-images/update-booking2.png" alt = "Update Booking" style="height:200px; width: 100%;">
 
 + The Update Booking page will bring up your booking, which was orginally submitted by the user on the booking appointment page. The information they entered will have been saved and ready for updating only. 
 + Once the changes have been updated and saved, the bookign will back to the manage appointment page awaiting approval from the admin. 
 
 ### Delete Booking Page (Delete Booking)
-<img src="static/readme-images/delete.png" alt = "Delete" style="height:300px; width: 100%;">
+<img src="docs/readme-images/delete.png" alt = "Delete" style="height:300px; width: 100%;">
 
 + The delete booking page will have two buttons, and request the user as to whether they would confirm cancelling the booking, confirm cancellation will be a green button and cancel cancellation request will be a red button. 
 + The booking once cancelled will be removed from the users manage appointments database and also from the admin database. 
 
 <span style="color:blue">**If a appointment has been deleted then no bookings will show in the manage appointment page**</span>
-<img src="static/readme-images/no-booking.png" alt = "Delete" style="height:300px; width: 100%;">
+<img src="docs/readme-images/no-booking.png" alt = "Delete" style="height:300px; width: 100%;">
 
 ### Contact Us Page
-<img src="static/readme-images/contact-us.png" alt = "Contact" style="height:300px; width: 100%;">
+<img src="docs/readme-images/contact-us.png" alt = "Contact" style="height:300px; width: 100%;">
 
 + The contact us page, was created for feedback and complaints users may have about the clinic. 
 + The form allows the user to engage with the clinic so feedback can be forwarded on to relevant parties. 
@@ -297,21 +297,21 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 + Once the form has been completed it can be sent to the admin. 
 + The user is displayed with a success alert message, which dissapear after a few seconds. 
-<img src="static/readme-images/sucess-contact.png" alt = "Contact" style="height:150px; width: 100%;">
+<img src="docs/readme-images/sucess-contact.png" alt = "Contact" style="height:150px; width: 100%;">
 
 ### Sign In / Login
-<img src="static/readme-images/login.png" alt = "Contact" style="height:240px; width: 100%;">
+<img src="docs/readme-images/login.png" alt = "Contact" style="height:240px; width: 100%;">
 
 + All existing users will need to sign into the site before they are allowed to book any appointments. 
 + Existing users may click the remember me tab, so they do not have to keep entering their details to view or make bookings. 
 + The sign in page allows users to signin or register if they are a new user.
 
-<img src="static/readme-images/sucess-login.png" alt = "Contact" style="height:240px; width: 100%;">
+<img src="docs/readme-images/sucess-login.png" alt = "Contact" style="height:240px; width: 100%;">
 
 + The user is greated with succesfully signed in 
 
 ### Register
-<img src="static/readme-images/register.png" alt = "Contact" style="height:180px; width: 100%;">
+<img src="docs/readme-images/register.png" alt = "Contact" style="height:180px; width: 100%;">
 
 + The register page allows users to register if they are a new user. 
 + The fields that are compulsary to complete are : 
@@ -323,7 +323,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 ### Logout
 
-<img src="static/readme-images/logout.png" alt = "Contact" style="height:180px; width: 100%;">
+<img src="docs/readme-images/logout.png" alt = "Contact" style="height:180px; width: 100%;">
 
 + The user is displayed a message confirming they would like to sign out. 
 + If signed out is confirmed the user is signed out and restricted from viewing or creating any bookings.
@@ -332,7 +332,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 <span style="color:blue">**The Admin sign in page**</span>
 + The Django Adminstration page requests the user to login 
 + The admin login is created by creating a superuser from the terminal
-<img src="static/readme-images/admin-signin.png" alt = "Admin Signin" style="height:180px; width: 100%;">
+<img src="docs/readme-images/admin-signin.png" alt = "Admin Signin" style="height:180px; width: 100%;">
 
 <span style="color:blue">**The Admin Model**</span>
 + The admin models contains a list of created models in the app. 
@@ -342,7 +342,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 + The admin models have all user information, which was entered during sign in and Book Appointments. 
 + Bookings and users can be deleted by the admin. 
 + Bookings can be approved and declined by the user. 
-<img src="static/readme-images/admin-model.png" alt = "Admin Signin" style="height:400px; width: 60%;">
+<img src="docs/readme-images/admin-model.png" alt = "Admin Signin" style="height:400px; width: 60%;">
 
 ## Future Features 
 While creating the Project, I realised that the vast input I could add to the design to allow it to have more functionalities. As we have all learnt the timescope involved limits the overall scope. 
@@ -481,6 +481,7 @@ A list of my credits are below
 + Slack - support from colleagues and mentors
 + Thorin - Flask Walkthrough Project for Bootstrap ideas
 + Pexels.com for Images 
++ Watford Health Centre - Images and text designs 
 
 
 

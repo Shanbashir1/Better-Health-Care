@@ -53,79 +53,79 @@
 
 ### HTML Testing using NU-HTML-CHECKER
 
-<img src="static/testing-images/html-validator.png" alt = "Html Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/html-validator.png" alt = "Html Testing" style="height:300px; width: 100%;">
 
 + All my pages was checked via nu-html-checker, initally i got 38 errors, mostly due to unclosed div tags or stray tags, these were quickly rectified and the code was rechecked and recieved no errors or warnings. 
 
 ### CSS Validator using JIGSAW.W3
 
-<img src="static/testing-images/jigsaw-css-validator.png" alt = "Jigsaw CSS" style="height:300px; width: 100%;">
+<img src="docs/testing-images/jigsaw-css-validator.png" alt = "Jigsaw CSS" style="height:300px; width: 100%;">
 
 + All my CSS was checked via Jigsaw W3.org, luckily I received no errors or warnings.  
 
 ### Javascript & JQuery using JSHINT 
 
-<img src="static/testing-images/jshint.png" alt = "Jshint" style="height:300px; width: 100%;">
+<img src="docs/testing-images/jshint.png" alt = "Jshint" style="height:300px; width: 100%;">
 
 + Although I did not have much Javascript, the code that I did have was checked on Jshint, by pasting the code in. I did initially have 8 warnings, as my code required semi-colons, this was rectified and the code was retested, and received no errors. I did however receive One undefined variable but checking with tutor support that this was because of the jquery and has no bearing affect to the validation
 
 ### Python - PEP8 Online checker (Code Institute Version)
 
 #### Main App - Better Health Care - Urls File
-<img src="static/testing-images/bhc-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/bhc-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 
 #### Booking App - Admin File
 
-<img src="static/testing-images/bookingapp-admin-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/bookingapp-admin-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 
 #### Booking App - Form File
-<img src="static/testing-images/bookingapp-forms-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/bookingapp-forms-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 
 #### Booking App - Urls File
-<img src="static/testing-images/bookingapp-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/bookingapp-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 
 #### Booking App - Views File
-<img src="static/testing-images/bookingapp-urls-pep8.png" alt = "Pep8" style="height:400px; width: 100%;">
+<img src="docs/testing-images/bookingapp-urls-pep8.png" alt = "Pep8" style="height:400px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 #### Contact App - Urls File
-<img src="static/testing-images/contactapp-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/contactapp-urls-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 #### Contact App - Form File
-<img src="static/testing-images/contactapp-form-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/contactapp-form-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 #### Contact App - Models File
-<img src="static/testing-images/contactapp-model-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/contactapp-model-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 
 #### Contact App - Views File
-<img src="static/testing-images/contactapp-views-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
+<img src="docs/testing-images/contactapp-views-pep8.png" alt = "Pep8" style="height:300px; width: 100%;">
 
 + A few initial errors on testing from the line being too long and having additional whitespaces. These were all rectified and the code was retested, and received no errors.
 
 ## Lighthouse Testing 
 
 #### Lighthouse Testing - Home Page
-<img src="static/testing-images/Home-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/Home-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 + The test were carried out by using the Lighthouse checker, which evaluates and scores the site on the following categories: 
     + Performance
@@ -135,17 +135,17 @@
 
 + Lighthouse can be accessed from the google dev tools page.
 #### Lighthouse Testing - About Us Page
-<img src="static/testing-images/about-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/about-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 #### Lighthouse Testing - Booking Appointment Page
-<img src="static/testing-images/bookingappointment-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/bookingappointment-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 
 #### Lighthouse Testing - Manage Appointment Page
-<img src="static/testing-images/manage-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/manage-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 #### Lighthouse Testing - Contact Us Page
-<img src="static/testing-images/contactus-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
+<img src="docs/testing-images/contactus-lighthouse.png" alt = "Lighhouse Testing" style="height:300px; width: 100%;">
 
 ## Browser Testing 
 The project was tested extensively on Google Chrome and Safari browsers, where no browser compatibility issues came up.
@@ -277,13 +277,13 @@ The About page did not consist of any testing methods as it contained the same f
 #### Admin Page
 
 + Sign in page for Admin
-<img src="static/manual-test-images/django-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
+<img src="docs/manual-test-images/django-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
 
 + Booking Appointment database in Admin
-<img src="static/manual-test-images/admin-booking.png" alt = "Admin" style="height:300px; width: 100%;">|
+<img src="docs/manual-test-images/admin-booking.png" alt = "Admin" style="height:300px; width: 100%;">|
 
 + Contact us Form database in Admin
-<img src="static/manual-test-images/contact-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
+<img src="docs/manual-test-images/contact-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
 
 | Element                 | Location                  | Action             | Expected Result                                                            | Pass/Fail |
 | ----------------------- | ------------------------- | ------------------ | -------------------------------------------------------------------------- | --------- |
@@ -307,7 +307,7 @@ The About page did not consist of any testing methods as it contained the same f
 | Url error         | 404 page | view            | Any URL not correctly displayed will take the user to the 404 page                    | Pass      |
 | Home Page Buttton | 404 page | Click + Display | The home page button redirects the user from the 404 page back to the home page       | Pass      |
 
-<img src="static/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">|
+<img src="docs/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">|
 
 ## Bugs 
 
@@ -318,7 +318,7 @@ The About page did not consist of any testing methods as it contained the same f
 
 + This particular bug was realised during testing. I realised that all my fields could be ammended including the name of the patient, which became difficult for an admin to realise the original booking user. I had to put in a defensive line of code and so I added a disabled field onto the forms.py which restricted the fields when making changes to existing bookings. 
 
-<img src="static/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+<img src="docs/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 | Element | Location            | Action               | Expected Result                                                 | Pass/Fail |
 | ------- | ------------------- | -------------------- | --------------------------------------------------------------- | --------- |
@@ -326,11 +326,12 @@ The About page did not consist of any testing methods as it contained the same f
 
 + The issue with the following bug was that any user was able to add a exisiting booking number to update-appointment and access it i.e url followed by update-appointment/7 or update-appointment/8 etc. This was a authentication error and serious error/bug that had to be rectified as other user were able to see each others appointments and data. The issue was eventually rectified with some defensive code in my booking app, view.py file, Class updateAppointments section, this restricted any user not assigned to the booking to change the url and view another users booking. If they tried to view a booking not belonging to them the user would receive a message informing them that they do not have access to this booking. 
 
-<img src="static/testing-images/bug-error.png" alt = "Better | Health | Care" style="height: 300px; width: 100%;">
+<img src="docs/testing-images/bug-error.png" alt = "Better | Health | Care" style="height: 300px; width: 100%;">
 
-+ After the bug issue has been resolved 
++ After the bug issue has been resolved, the user is alerted a error message and redirected to the manage booking page. 
 
-<img src="static/testing-images/bugs.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+
+<img src="docs/testing-images/bugs.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 | Element | Location                 | Action               | Expected Result                                                                      | Pass/Fail |
 | ------- | ------------------------ | -------------------- | ------------------------------------------------------------------------------------ | --------- |
@@ -338,8 +339,15 @@ The About page did not consist of any testing methods as it contained the same f
 
 + Again, while conducting manual testing I realised that the site could benefit from some defensive program, which blocks user from booking again while they have a awaiting appointments. I introduced a function which stopped users from booking again, and alerted the user that they already have an appoinment with that name. The message alerted the user and took them back to Manage appointments.
 
-<img src="static/testing-images/bug3.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+<img src="docs/testing-images/bug3.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
+| Location            | Action               | Expected Result                                        | Pass/Fail |
+| ------------------- | -------------------- | ------------------------------------------------------ | --------- |
+| Delete Booking Page | Authentication error | Not allow another user to delete another users booking | Pass      |
+
++ Like the update booking page, the user could also access the delete booking page by accessing the urls booking numbers, I added a defensive code and this restricted the user from accessing any other users booking. The user if attempted is alerted a error message and redirected to the manage booking page.
+
+<img src="docs/testing-images/bug4.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
 
 ### Unfixed Bugs
 

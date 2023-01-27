@@ -37,6 +37,7 @@
             <i class="fa-solid fa-thumbs-down text-danger"></i> Decline
           </h3> 
           <p>Your appointment has been declined, Please rebook to make a new booking.</p>
+          <a href="{% url 'delete-appointments' pk=appointment.id %}" class="btn btn-danger">Delete</a>
         {% else %}
         <!-- otherwise user's will be seeing this message -->
           <h3 class="card-title">

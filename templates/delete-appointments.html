@@ -5,7 +5,7 @@
       <!-- To delete booking - confirmation button will be apear with a cancel and confirm option --> 
       <form method="post" action=""> 
         {% csrf_token %} 
-        <div class="mt-4 my-4 text-center">
+        <div class="container p-4 mt-4 my-4 text-center">
         <p>Please confirm cancellation of the appointment <strong class="text-primary">{{ first_name }}</strong>? </p>
         <button type="submit" class="btn btn-success">Confirm</button>
         <a href="{% url 'manage-appointments' %}">
