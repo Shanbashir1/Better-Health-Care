@@ -3,7 +3,7 @@ from .views import Index, BookAppointment, ManageAppointment, \
 DeleteAppointment,  UpdateAppointment
 
 
-# Url Patterns for the booking app, allowing users to book, manage, \ 
+# Url Patterns for the booking app, allowing users to book, manage, \
 # delete and update appointments
 
 urlpatterns = [

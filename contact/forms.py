@@ -24,4 +24,3 @@ class ContactForm(forms.ModelForm):
 
     def object(self):
         pass
-

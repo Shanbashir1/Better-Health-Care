@@ -90,7 +90,6 @@ class DeleteAppointment(DeleteView):
             pk=self.request.pk)
         appointments.delete()
 
-
     def get(self, request, *args, **kwargs):
         appointment = get_object_or_404(BookAppointmentModel, id=kwargs['pk'])
         if appointment.patient != request.user:

@@ -56,7 +56,3 @@ class Updateform(BookAppointmentForm):
     doctor = forms.CharField(disabled=True)
     title = forms.CharField(disabled=True)
     email = forms.CharField(disabled=True)
-
-
-                                        
-        
