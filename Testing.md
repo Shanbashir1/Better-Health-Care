@@ -44,7 +44,7 @@
     + [Django Admin Page](#admin-page)
     + [404 Error Page](#404-error-page)
 
-+ [Automated Testing](#404-error-page)
++ [Automated Testing](#automated-testing)
 
 + [Bugs](#bugs)
     + [Fixed Bugs](#fixed-bugs)
@@ -200,6 +200,10 @@ The About page did not consist of any testing methods as it contained the same f
 | Book Button        | Booking Appointment Page | Click + Display | 1\. Submit form 2. Redirect to Manage Appointments                             | Pass      |
 | Book Button        | Manage Appointment       | Success Message | Thank you for your booking                                                     | Pass      |
 
+<img src="docs/manual-test-images/success.booking_page.png" alt = "Admin" style="height:300px; width: 100%;">
+
+<img src="docs/manual-test-images/email_error.png" alt = "Admin" style="height:140px; width: 100%;">
+
 
 #### Manage Appointment Page
 
@@ -212,6 +216,8 @@ The About page did not consist of any testing methods as it contained the same f
 | Main Page | Manage Appointment | Decline          | Display appointment and text confirming decline                 | Pass      |
 | Main Page | Manage Appointment | Approved         | Display appointment and text comfirming approval                | Pass      |
 | Main Page | Manage Appointment | Site Pagination  | Display 3 bookings per page with both next and previous options | Pass      |
+
+<img src="docs/manual-test-images/no_appointments.png" alt = "Admin" style="height:200px; width: 100%;">
 
 
 #### Update Appointment Page
@@ -256,6 +262,9 @@ The About page did not consist of any testing methods as it contained the same f
 | Remember me    | Sign In Page | Tick Option     | Able to tick to remember login details          | Pass      |
 | Once_Signed_In | Home Page    | Success Message | You have successfully signed in as {first_name} | Pass      |
 
+<img src="docs/manual-test-images/sign_in_error.png" alt = "Login" style="height:200px; width: 100%;">
+
+<img src="docs/manual-test-images/sign_in_success.png" alt = "Login" style="height:200px; width: 100%;">
 
 #### Register Page
 
@@ -276,16 +285,25 @@ The About page did not consist of any testing methods as it contained the same f
 | Sign Out Button | Logout Page | Success Message | Successfully Logged out               | Pass      |
 | Sign Out Button | Home Page   | Home Page       | Redirect to Home page once logged out | Pass      
 
+<img src="docs/manual-test-images/sign_out_success.png" alt = "Login" style="height:200px; width: 100%;">
+
 #### Admin Page
 
 + Sign in page for Admin
-<img src="docs/manual-test-images/django-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
+
+<img src="docs/manual-test-images/django-admin.png" alt = "Admin" style="height:300px; width: 100%;">
 
 + Booking Appointment database in Admin
-<img src="docs/manual-test-images/admin-booking.png" alt = "Admin" style="height:300px; width: 100%;">|
+
+<img src="docs/manual-test-images/admin-booking.png" alt = "Admin" style="height:300px; width: 100%;">
 
 + Contact us Form database in Admin
-<img src="docs/manual-test-images/contact-admin.png" alt = "Admin" style="height:300px; width: 100%;">|
+
+<img src="docs/manual-test-images/contact-admin.png" alt = "Admin" style="height:300px; width: 100%;">
+
++ Approving and Decline Appointments in Admin
+
+<img src="docs/manual-test-images/admin-approval.png" alt = "Admin" style="height:300px; width: 100%;">
 
 | Element                 | Location                  | Action             | Expected Result                                                            | Pass/Fail |
 | ----------------------- | ------------------------- | ------------------ | -------------------------------------------------------------------------- | --------- |
@@ -309,15 +327,28 @@ The About page did not consist of any testing methods as it contained the same f
 | Url error         | 404 page | view            | Any URL not correctly displayed will take the user to the 404 page                    | Pass      |
 | Home Page Buttton | 404 page | Click + Display | The home page button redirects the user from the 404 page back to the home page       | Pass      |
 
-<img src="docs/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">|
+<img src="docs/testing-images/404page.png" alt = "Admin" style="height:300px; width: 100%;">
 
 ## Automated Testing
 I managed to get some automated tests done for my project. Ideally I wanted to use the automated testing way of coding as this prevents writing additional code which may not be required. However they way I started my project, prevented me from this approach. Automated Testing is handy in case packages need upgrading, or major changes to the app are made. In this case, automated tests can be run first, to find obvious errors caused by the changes. After that, manual testing should still be performed.
 
-+ 10 Automated tests were carried out all together - all resulting in passes. 
++ 12 Automated tests were carried out all together - all resulting in passes. 
 + A coverage report was also carried out and hopefully in the near future, I can complete all the test to result it as 100%.
 
-<img src="docs/testing-images/coverage-report.png" alt = "Automated Testing" style="height:300px; width: 100%;">|
+<img src="docs/testing-images/coverage-report.png" alt = "Automated Testing" style="height:300px; width: 100%;">
+
+
+#### Coverage Reports - Automated Testing
+<img src="docs/testing-images/coverage_html.png" alt = "Automated Testing" style="height:300px; width: 100%;">
+
+A coverage report can be easily accessed by following the command below : 
++ In the Terminal enter : coverage run --source=[app_name] manage.py test
++ A report will be displayed in your directory 
++ You will then need to enter : coverage report
++ You will then have display on your terminal of your report. 
++ You can also view this command in HTML and view a full report of the outstanding, for this you will need to type in the Terminal: coverage html and a report will be displayed.
+
+
 
 ## Bugs 
 
@@ -328,7 +359,7 @@ I managed to get some automated tests done for my project. Ideally I wanted to u
 
 + This particular bug was realised during testing. I realised that all my fields could be ammended including the name of the patient, which became difficult for an admin to realise the original booking user. I had to put in a defensive line of code and so I added a disabled field onto the forms.py which restricted the fields when making changes to existing bookings. 
 
-<img src="docs/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 200px; width: 100%;">
+<img src="docs/testing-images/disable-fields.png" alt = "Better | Health | Care" style="height: 150px; width: 100%;">
 
 | Element | Location            | Action               | Expected Result                                                 | Pass/Fail |
 | ------- | ------------------- | -------------------- | --------------------------------------------------------------- | --------- |

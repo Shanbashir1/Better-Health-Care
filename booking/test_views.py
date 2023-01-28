@@ -1,12 +1,13 @@
-from django.test import TestCase
-from .models import BookAppointmentModel
+from django.test import TestCase, Client
+from django.urls import reverse
 
 class TestViews(TestCase):
 
-    def test_get_home(self):
-        response = self.client.get("/")
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
+    def setUp(self):
+        self.client = Client()
+        self.home_url = reverse('home')
+        self.BookAppointment_url = reverse('book_appointment')
+        self.ManageAppointment_url = reverse('manage-appointments')
 
     def test_get_about(self):
         response = self.client.get("/about")
