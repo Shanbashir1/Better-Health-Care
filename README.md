@@ -186,11 +186,11 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 <img src="docs/readme-images/homepage-2.png" alt = "Home Page" style="height:400px; width: 100%;">
 
-+ The homepage includes a image of a patient and a doctor having a consultation. The image was improted from pexels.com
-+ The homepage has some text to reflect to the user as why they should choose the clinic. The text is a small paragraphy showing the user data and feature of clinic. 
++ The homepage includes a image of a patient and a doctor having a consultation. The image was imported from pexels.com
++ The homepage has some text to reflect to the user as why they should choose the clinic. The text is a small paragraph showing the user data and feature of clinic. 
 + The hompage is a simple page with a good color contrast, it is simple and easy to navigate to other pages.
 + The background color is a white background and the remaining color contrast is of those from the header and footer. 
-+ Bootstrap 4 was used to design the Home page with some minor adjustments using internal CSS. 
++ Bootstrap was used to design the Home page with some minor adjustments using internal CSS. 
 
 ### About Us Page
 <img src="docs/readme-images/about-1.png" alt = "About Us" style="height:800px; width: 50%;">
@@ -198,7 +198,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 
 + The about page was designed to give the user a background and detail of the clinics services and values. 
-+ The about page was designed using Bootstrap 4 and the color font was also used using Boostrap 4. 
++ The about page was designed using Bootstrap and the color font was also used using Bootstrap. 
 + The image was a image of a patient under medical care and was imported from pexels.com. 
 + The text was designed using bullets points and gave the user a clear indication of the clinics values and care requirements. 
 
@@ -206,10 +206,10 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 <img src="docs/readme-images/ba-signin.png" alt = "Signin" style="height:300px; width: 100%;">
 <img src="docs/readme-images/ba-signin2.png" alt = "Signin" style="height:700px; width: 70%;">
 
-+ The Booking Appointmment page does not allow a user to book any appointment untill he has signed in. So a user would need to register or sign in before accessing the booking appointment form
++ The Booking Appointment page does not allow a user to book any appointment untill he/she has signed in. So a user would need to register or sign in before accessing the booking appointment form
 + Once the user has signed they are navigated to the booking form, were they can make a booking. 
-+ The booking is a feature which has been imported from crispy forms, and it also has datepicker facility to select dates using a calender.
-+ The booking form has the following fields : <span style="color:red">**All fields are compulsary to fill in.**</span>
++ The booking is a feature which has been imported by using crispy forms, and it also has datepicker facility to select dates using a calender.
++ The booking form has the following fields : <span style="color:red">**All fields are compulsary to fill in, otherwise the user may not proceed further.**</span>
 1. Title (Drop down Title option)
 2. First Name 
 3. Last Name 
@@ -220,15 +220,15 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 8. Message 
 9. Urgent (Drop down urgent option)
 + The Booking form if completed correctly will forward the user to the manage booking page. Otherwise it will request the user to correctly complete all the fields.
-+ The user is also send a message once the booking has been made 
++ The user is also sent a  success message once the booking has been created.
 <img src="docs/readme-images/success-booking.png" alt = "Approved" style="height:200px; width: 100%;">
 
-### Manage Booking Page (Read/View Booking)
+### Manage Appointments Page (Read/View Booking)
 <span style="color:blue">**If a appointment has been approved by the admin**</span>
 <img src="docs/readme-images/approved.png" alt = "Approved" style="height:200px; width: 100%;">
 
-+ So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. Once the booking has been approved, the Approved notification will be displayed to the users, depending if the user is logged in. 
-+ A font Awesome thumbs up icon was used to design the Approved notification.
++ So once a user has made a succesful booking, the booking is forwarded onto our manage appointment page. Once the booking has been approved, the approved notification will be displayed to the users, depending if the user is logged in. 
++ A font Awesome thumbs up icon was used to design the approved notification.
 + <span style="color:red">*Your appointment is now confirmed. Please ensure you attend the appointment*</span> This text informs the user that the appointment has been approved and booked in and that they should attend the clinic. 
 + The booking has information on the user,  such as 
 1. First Name 
@@ -240,8 +240,8 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 <span style="color:blue">**If a appointment has been declined by the admin**</span>
 <img src="docs/readme-images/decline.png" alt = "Decline" style="height:200px; width: 100%;">
 
-+ So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. If the  booking has been declined, the decline notification will be displayed to the users, depending if the user is logged in. 
-+ A font Awesome thumbs down icon was used to design the Approved notification.
++ So once a user has made a succesful booking, the booking is forwarded onto our manage appointment page. If the  booking has been declined, the decline notification will be displayed to the users, depending if the user is logged in. 
++ A font Awesome thumbs down icon was used to design the decline notification.
 + <span style="color:red">*Your appointment has been declined. Please rebook to make a new booking*</span> This text informs the user that the appointment has been declined and that they should rebook.
 + The booking has information on the user,  such as 
 1. First Name 
@@ -253,24 +253,26 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 <span style="color:blue">**If a appointment has been booked and awaiting approval by the admin**</span>
 <img src="docs/readme-images/waiting-approval.png" alt = "Waiting Approval" style="height:200px; width: 100%;">
 
-+ So once a user has made a succesful booking, the booking is forwarded onto our manage booking page. If the booking has not been viewed by the admin, the booking will remain in it orginal waiting approval stage, this depending if the user is logged in. 
++ So once a user has made a succesful booking, the booking is forwarded onto our manage appointment page. If the booking has not been viewed by the admin, the booking will remain in it's orginal waiting approval stage, this is depending if the user is logged in. 
 + A font Awesome clock icon was used to design the waiting-approval notification.
-+ The booking has information on the user,  such as 
++ The booking has information on the user, such as 
 1. First Name 
 2. Last Name 
 3. Requested Date 
 4. Doctor 
 5. Urgent / Not Urgent 
 + While the booking is in waiting approval stage the user has got the chance to update the booking or cancel the booking. 
-+ The user is also offered a pagination of 3 booking history per page. Which they can access by pressing the next or previous button. 
++ The user is also offered a pagination of 3 booking history per page. Which they can access by pressing the next or previous button.
++ The user is unable to make any further bookings while they have a waiting approval appointment in the manage appointments page. They will only be allowed to rebook once they have a "approved" or "decline" status.
 
 ### Update Booking Page (Update Booking)
 <img src="docs/readme-images/update-booking1.png" alt = "Update Booking" style="height:200px; width: 100%;">
 
 <img src="docs/readme-images/update-booking2.png" alt = "Update Booking" style="height:200px; width: 100%;">
 
-+ The Update Booking page will bring up your booking, which was orginally submitted by the user on the booking appointment page. The information they entered will have been saved and ready for updating only. 
-+ Once the changes have been updated and saved, the bookign will back to the manage appointment page awaiting approval from the admin. 
++ The update appointment page will bring up your bookings, which was orginally submitted by the user on the booking appointment page. The information they entered will have been saved and ready for editing only. 
++ Once the changes have been updated and saved, the bookign will back to the manage appointment page awaiting approval from the admin.
++ A feature which was added, was the disabled fields. This was introduced so that the user could not ammend all the fields, which would in return be difficult for the admin to cross check the user with the original booking. 
 
 ### Delete Booking Page (Delete Booking)
 <img src="docs/readme-images/delete.png" alt = "Delete" style="height:300px; width: 100%;">
@@ -286,7 +288,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 + The contact us page, was created for feedback and complaints users may have about the clinic. 
 + The form allows the user to engage with the clinic so feedback can be forwarded on to relevant parties. 
-+ The form is a simple created form which allows the user to enter his/her details and submit to the admin page. 
++ The form is a simple form which allows the user to enter his/her details and submit it to the admin. 
 + The form is then viewed by the admin and acted on accordingly. 
 + The form contains the following compulsary fields. 
 1. First Name 
@@ -296,7 +298,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 5. Message 
 
 + Once the form has been completed it can be sent to the admin. 
-+ The user is displayed with a success alert message, which dissapear after a few seconds. 
++ The user is displayed with a success alert message, which dissapear after a few seconds and returns a blank form.
 <img src="docs/readme-images/sucess-contact.png" alt = "Contact" style="height:150px; width: 100%;">
 
 ### Sign In / Login
@@ -308,7 +310,7 @@ The selection of the colours for the web page was chosen from Color Hex. The col
 
 <img src="docs/readme-images/sucess-login.png" alt = "Contact" style="height:240px; width: 100%;">
 
-+ The user is greated with succesfully signed in 
++ The user is greated with a message "succesfully signed in as {First_name}" 
 
 ### Register
 <img src="docs/readme-images/register.png" alt = "Contact" style="height:180px; width: 100%;">
@@ -382,6 +384,8 @@ All of the testing and validation for the project can be viewed here [Testing an
 + Google Developer Tools - to view pages on different media screens and ammend changes as developing. 
 + Balsamiq Wireframes
 + Responsive design
++ HTML Viewer - Code Beautify
+
 
 ### Libraries
 #### Libraries/Module Installed
@@ -476,13 +480,16 @@ A list of my credits are below
 + Testing Module for Code Institue
 + Learn Django Youtube
 + Learn Python, Youtube
++ Python Automated Testing - Youtube
 + W3schools.com - Help with Python coding.
 + stackoverflow.com - help with coding, by visiting past forums.
 + Slack - support from colleagues and mentors
 + Thorin - Flask Walkthrough Project for Bootstrap ideas
 + Pexels.com for Images 
 + Watford Health Centre - Images and text designs 
-
++ Django Framework Documentation. 
++ Bootstrap Documentation
++ Other Health Centre clinics websites.
 
 
 ## Acknowledgement

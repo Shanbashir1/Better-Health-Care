@@ -234,13 +234,14 @@ The About page did not consist of any testing methods as it contained the same f
 
 | Element   | Location                | Action             | Expected Result                                                      | Pass/Fail |
 | --------- | ----------------------- | ------------------ | -------------------------------------------------------------------- | --------- |
-| Main Page | Delete Appointment Page | View               | View delete page and confirmation with buttons confirm and cancel    | Pass      |
-| Main Page | Delete Appointment Page | Cancel Button      | Cancel's request and redirects user back to manage appointments page | Pass      |
-| Main Page | Delete Appointment Page | Confirm            | Delete's booking from manage appointments and admin page             | Pass      |
-| Main Page | Manage Appointment Page | Confirmed deletion | No appointments dispalyed on Manage appointments page                | Pass      |
+| Main Page | Delete Appointment Page | View Page              | View delete page with buttons confirm and cancel    | Pass      |
+| Main Page | Delete Appointment Page | Click Cancel Button      | Cancel's request and redirects user back to manage appointments page | Pass      |
+| Main Page | Delete Appointment Page | Click Confirm Button          | Delete's booking from manage appointments and admin page             | Pass      |
+| Main Page | Manage Appointment Page |Display Confirmed deletion | No appointments dispalyed on Manage appointments page                | Pass      |
 
+<img src="docs/manual-test-images/delete-appointment.png" alt = "Admin" style="height:200px; width: 100%;">
 
-#### Contact Us Page
+#### Contact Us Page (Form)
 
 | Element     | Location        | Action           | Expected Result                                                              | Pass/Fail |
 | ----------- | --------------- | ---------------- | ---------------------------------------------------------------------------- | --------- |
