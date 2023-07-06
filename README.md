@@ -125,7 +125,7 @@ Balsamiq wireframes was used to design the wireframes in the design phase of thi
 <img src="docs/wireframes-images/login.png" alt = "Better | Health | Care" style="height: 400px; width: 100%;">
 
 
-[Balsamiq Wireframes](https://balsamiq.cloud/spvy67g/pamoowu/r671F?f=N4IgUiBcCMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D "Balsamiq Wireframes")
+![Balsamiq Wireframes](https://balsamiq.cloud/spvy67g/pamoowu/r671F?f=N4IgUiBcCMA0IDkpxAYWfAMhkAhHAsjgFo4DSUA2gLoC%2BQA%3D "Balsamiq Wireframes")
 
 ## Database Diagram
 Lucid Charts was used to design the unique models used in this project.
